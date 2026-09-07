@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ROLLER SHUTTER - Quality Space L.L.C</title>
+  <meta name="description"
+    content="Heavy-Duty Extruded Security & Thermal Insulation Shutters. German-engineered architectural solutions by Quality Space LLC Dubai." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: "#c8102e", dark: "#a00c24", light: "#e0142f" },
+            ink: "#161616",
+            paper: "#f5f4f2",
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+            display: ["Archivo", "Inter", "sans-serif"],
+          },
+          fontWeight: {
+            400: "400", 500: "500", 600: "600", 700: "700", 800: "800", 900: "900",
+          },
+          maxWidth: { container: "1216px" },
+        },
+      },
+    };
+  </script>
+  <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../responsive.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+
+<body class="bg-white font-sans text-ink antialiased">
+
+  <!-- ============================ HEADER ============================ -->
+  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-white">
+    <div class="mx-auto flex max-w-container items-center justify-between px-5 py-4 md:px-8">
+      <!-- Logo -->
+      <a href="../index.html"
+        class="flex items-center px-4 py-2 transition hover:bg-white">
+        <img src="../images/logo.png" alt="Quality Space L.L.C - Dream it, Design it, Build it"
+          class="h-8 w-auto select-none md:h-11" />
+      </a>
+
+      <div class="flex items-center gap-3">
+        <!-- Header Contact Info -->
+        <a href="mailto:info@qualityspace.ae"
+          class="hidden items-center gap-2 rounded-full border border-black/10 bg-white/85 px-3.5 py-2 text-xs font-600 text-ink backdrop-blur shadow-sm transition hover:bg-white hover:text-brand lg:inline-flex">
+          <svg class="h-3.5 w-3.5 text-brand shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span>info@qualityspace.ae</span>
+        </a>
+
+        <a href="tel:0506632081"
+          class="hidden items-center gap-2 rounded-full border border-black/10 bg-white/85 px-3.5 py-2 text-xs font-600 text-ink backdrop-blur shadow-sm transition hover:bg-white hover:text-brand sm:inline-flex">
+          <svg class="h-3.5 w-3.5 text-brand shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <span>0506632081</span>
+        </a>
+
+        <a href="../contact.html#inquiry-form"
+          class="btn-ghost hidden rounded-full bg-ink px-6 py-2.5 text-sm font-600 text-white transition sm:inline-flex">Request
+          Service</a>
+        <button id="burger"
+          class="burger relative z-[60] flex h-11 w-11 flex-col items-center justify-center gap-[5px] rounded-full border border-black/10 bg-white/70 backdrop-blur"
+          aria-label="Menu" aria-expanded="false">
+          <span class="block h-[2px] w-5 bg-ink"></span>
+          <span class="block h-[2px] w-5 bg-ink"></span>
+          <span class="block h-[2px] w-5 bg-ink"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Nav overlay -->
+  <nav id="navOverlay" class="fixed inset-0 z-[55] flex flex-col items-center justify-center bg-ink text-white">
+    <a href="../index.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Home</a>
+    <a href="../about.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">About Us</a>
+    <a href="../products.html" class="font-display text-4xl font-800 py-3 text-brand transition">Products</a>
+    <a href="../projects.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Projects</a>
+    <a href="../gallery.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Gallery</a>
+    <a href="../blog.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Blog</a>
+    <a href="../contact.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Contact</a>
+
+    <!-- Close button -->
+    <button id="navClose"
+      class="absolute top-5 right-5 z-20 flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur transition hover:bg-white hover:text-ink hover:scale-110 active:scale-95 md:top-7 md:right-8"
+      aria-label="Close menu">
+      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </nav>
+
+  <main id="top" class="pt-24 md:pt-28">
+
+    <!-- ============================ BREADCRUMB & HEADER ============================ -->
+    <section class="mx-auto max-w-container px-5 pt-4 md:px-8">
+      <!-- Breadcrumbs -->
+      <nav aria-label="Breadcrumb" class="mb-6 flex items-center gap-2 text-xs font-600 text-neutral-400">
+        <a href="../index.html" class="transition hover:text-brand">Home</a>
+        <span>/</span>
+        <a href="../products.html" class="transition hover:text-brand">Products</a>
+        <span>/</span>
+        <span class="text-ink font-700">Architectural Aluminum Roller Shutters</span>
+      </nav>
+
+      <!-- Headline & Tag -->
+      <div class="max-w-4xl">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="inline-flex items-center gap-2 rounded-full bg-brand/10 px-3.5 py-1 text-xs font-700 tracking-wider text-brand uppercase">
+            Product Solution #10
+          </span>
+          <span class="rounded-full bg-black/5 px-3 py-1 text-xs font-600 text-neutral-600">
+            Security & Energy Protection
+          </span>
+          <span class="text-xs font-600 text-neutral-400">·</span>
+          <span class="text-xs font-600 text-neutral-400">UAE &amp; Middle East</span>
+        </div>
+
+        <h1 class="font-display mt-4 text-3xl font-900 leading-[1.12] text-ink md:text-5xl lg:text-[3.25rem]">
+          ROLLER SHUTTER
+        </h1>
+
+        <p class="mt-4 text-lg leading-relaxed text-neutral-600 md:text-xl font-500">
+          Heavy-Duty Extruded Security & Thermal Insulation Shutters
+        </p>
+      </div>
+
+      <!-- Hero Showcase Image -->
+      <div class="mt-8 overflow-hidden rounded-3xl border border-black/10 shadow-lg bg-paper">
+        <img src="../images/products/ROLLER-SHUTTER/20120816.jpg"
+          alt="ROLLER SHUTTER Architectural Installation"
+          class="h-[380px] sm:h-[480px] md:h-[580px] w-full object-cover" />
+        <div class="bg-paper px-6 py-4 text-xs text-neutral-600 border-t border-black/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+          <span><strong>Architectural System:</strong> ROLLER SHUTTER installed by Quality Space LLC.</span>
+          <span class="text-brand font-700 uppercase tracking-wider text-[11px]">Precision European Engineering</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ MAIN CONTENT & SPECS ============================ -->
+    <section class="mx-auto max-w-container px-5 py-12 md:px-8 md:py-16">
+      <div class="grid gap-12 lg:grid-cols-12 lg:gap-14">
+
+        <!-- Left Description Column (7 Cols) -->
+        <div class="lg:col-span-7">
+          <span class="text-xs font-700 uppercase tracking-[0.2em] text-brand">System Overview</span>
+          <h2 class="font-display mt-2 text-2xl font-800 text-ink sm:text-3xl">
+            Designed for Architectural Distinction &amp; Performance
+          </h2>
+
+          <div class="mt-5 space-y-4 text-[15px] leading-7 text-neutral-600">
+            <p>Engineered for superior burglary resistance, storm protection, and acoustic insulation, Quality Space Roller Shutters are manufactured from double-walled extruded or polyurethane foam-insulated aluminum profiles. When rolled down, they form an impenetrable thermal barrier that reflects harsh solar heat in summer, locks in indoor climate efficiency, and creates complete darkness for master suites and home cinemas.</p>
+          </div>
+
+          <div class="mt-8">
+            <h3 class="font-display text-lg font-800 text-ink">Key Engineering Highlights</h3>
+            <ul class="mt-4 space-y-3">
+
+              <li class="flex items-start gap-3">
+                <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand">
+                  <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                <span class="text-sm leading-relaxed text-neutral-700">Certified RC2 / RC3 forced-entry security resistance with automated anti-lift lock springs</span>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand">
+                  <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                <span class="text-sm leading-relaxed text-neutral-700">Dense polyurethane foam core provides thermal insulation and reduces ambient outside noise by up to 10 dB</span>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand">
+                  <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                <span class="text-sm leading-relaxed text-neutral-700">100% room darkening capability ideal for bedrooms, home theaters, and luxury hotel suites</span>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand">
+                  <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                <span class="text-sm leading-relaxed text-neutral-700">Compact roll diameter fits seamlessly into recessed ceiling lintels or architectural exterior boxes</span>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand">
+                  <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                <span class="text-sm leading-relaxed text-neutral-700">Smart obstacle detection prevents curtain damage if patio furniture or objects are below</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- CTA Banner -->
+          <div class="mt-10 rounded-2xl bg-paper p-6 sm:p-8 border border-black/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+            <div>
+              <h4 class="font-display text-lg font-800 text-ink">Require CAD / BIM Specifications?</h4>
+              <p class="mt-1 text-xs text-neutral-500">Contact our engineering team for custom drawings, wind calculations, and site surveys.</p>
+            </div>
+            <a href="../contact.html#inquiry-form"
+              class="btn-pill shrink-0 bg-brand px-6 py-3 text-xs font-700 text-white shadow-sm hover:bg-brand-dark transition">
+              Request Consultation
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Technical Sidebar (5 Cols) -->
+        <div class="lg:col-span-5">
+          <div class="sticky top-28 rounded-3xl border border-black/10 bg-white p-6 sm:p-8 shadow-sm">
+            <div class="flex items-center justify-between border-b border-black/10 pb-4">
+              <h3 class="font-display text-base font-800 text-ink">Technical Specifications</h3>
+              <span class="rounded-full bg-brand/10 px-2.5 py-0.5 text-[11px] font-700 text-brand">
+                Product #10
+              </span>
+            </div>
+
+            <div class="mt-5 space-y-4">
+
+              <div class="border-b border-black/5 pb-3">
+                <span class="text-[11px] font-700 uppercase tracking-wider text-neutral-400">Slat Profiles</span>
+                <p class="font-display mt-0.5 text-sm font-700 text-ink">37mm / 44mm / 55mm extruded aluminum or PU-foam insulated slats</p>
+              </div>
+
+              <div class="border-b border-black/5 pb-3">
+                <span class="text-[11px] font-700 uppercase tracking-wider text-neutral-400">Security Rating</span>
+                <p class="font-display mt-0.5 text-sm font-700 text-ink">RC2 / RC3 anti-burglary certified</p>
+              </div>
+
+              <div class="border-b border-black/5 pb-3">
+                <span class="text-[11px] font-700 uppercase tracking-wider text-neutral-400">Sound Insulation</span>
+                <p class="font-display mt-0.5 text-sm font-700 text-ink">Sound reduction up to 10 dB(A)</p>
+              </div>
+
+              <div class="border-b border-black/5 pb-3">
+                <span class="text-[11px] font-700 uppercase tracking-wider text-neutral-400">Finish</span>
+                <p class="font-display mt-0.5 text-sm font-700 text-ink">Durable thermoset architectural powder coating in standard & custom RAL shades</p>
+              </div>
+
+              <div class="border-b border-black/5 pb-3">
+                <span class="text-[11px] font-700 uppercase tracking-wider text-neutral-400">Drive System</span>
+                <p class="font-display mt-0.5 text-sm font-700 text-ink">Somfy tubular motors with emergency manual crank override</p>
+              </div>
+
+              <div class="border-b border-black/5 pb-3">
+                <span class="text-[11px] font-700 uppercase tracking-wider text-neutral-400">Controls</span>
+                <p class="font-display mt-0.5 text-sm font-700 text-ink">Wall switches, key switches, RF remote transmitters, and KNX modules</p>
+              </div>
+            </div>
+
+            <div class="mt-8 border-t border-black/10 pt-6">
+              <a href="tel:0506632081"
+                class="flex w-full items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-5 py-3 text-xs font-700 text-ink transition hover:bg-black/5">
+                <svg class="h-4 w-4 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                Call Engineer: 050 663 2081
+              </a>
+
+              <a href="../contact.html#inquiry-form"
+                class="mt-3 flex w-full items-center justify-center rounded-full bg-ink px-5 py-3 text-xs font-700 text-white transition hover:bg-neutral-800">
+                Inquire About This Solution
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================ PRODUCT IMAGES GALLERY ============================ -->
+    <section class="bg-paper py-14 md:py-20 border-y border-black/10">
+      <div class="mx-auto max-w-container px-5 md:px-8">
+        <div class="mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div>
+            <span class="text-xs font-700 uppercase tracking-[0.2em] text-brand">Visual Portfolio</span>
+            <h2 class="font-display mt-2 text-2xl font-800 text-ink sm:text-3xl">
+              Architectural Aluminum Roller Shutters Media &amp; Installations
+            </h2>
+          </div>
+          <p class="text-xs text-neutral-500 max-w-sm">
+            High-resolution project photography and detail captures of this solution from our projects across the UAE.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
+            <div class="group relative overflow-hidden rounded-2xl border border-black/10 bg-paper shadow-sm aspect-[4/3]">
+              <img src="../images/products/ROLLER-SHUTTER/20120816.jpg" alt="ROLLER SHUTTER photograph 1"
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10"></div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-2xl border border-black/10 bg-paper shadow-sm aspect-[4/3]">
+              <img src="../images/products/ROLLER-SHUTTER/IMG-2011.jpg" alt="ROLLER SHUTTER photograph 2"
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10"></div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-2xl border border-black/10 bg-paper shadow-sm aspect-[4/3]">
+              <img src="../images/products/ROLLER-SHUTTER/P1000911.JPG" alt="ROLLER SHUTTER photograph 3"
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10"></div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-2xl border border-black/10 bg-paper shadow-sm aspect-[4/3]">
+              <img src="../images/products/ROLLER-SHUTTER/P1000943.JPG" alt="ROLLER SHUTTER photograph 4"
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10"></div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-2xl border border-black/10 bg-paper shadow-sm aspect-[4/3]">
+              <img src="../images/products/ROLLER-SHUTTER/P1020662.JPG" alt="ROLLER SHUTTER photograph 5"
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10"></div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ YOUTUBE EMBEDDED VIDEOS / SHORTS ============================ -->
+    <section class="py-14 md:py-20">
+      <div class="mx-auto max-w-container px-5 md:px-8">
+        <div class="mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div>
+            <span class="text-xs font-700 uppercase tracking-[0.2em] text-brand">Live Video Demonstrations</span>
+            <h2 class="font-display mt-2 text-2xl font-800 text-ink sm:text-3xl">
+              Engineering in Motion &amp; Field Demos
+            </h2>
+          </div>
+          <p class="text-xs text-neutral-500 max-w-md">
+            Watch real-world YouTube video demonstrations and field operations showcasing deployment speed, wind stability, and motorized precision.
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2">
+
+            <div class="overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm">
+              <div class="relative aspect-video w-full overflow-hidden bg-black">
+                <iframe class="h-full w-full" src="https://www.youtube.com/embed/K4TOrB7at0Y?rel=0"
+                  title="Extruded Aluminum Security Shutter Demonstration"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between">
+                  <span class="rounded-full bg-brand/10 px-3 py-1 text-[10px] font-700 uppercase tracking-wider text-brand">
+                    Live Demo
+                  </span>
+                  <span class="text-[11px] font-600 text-neutral-400">YouTube Video</span>
+                </div>
+                <h3 class="font-display mt-3 text-base font-800 text-ink">
+                  Extruded Aluminum Security Shutter Demonstration
+                </h3>
+                <p class="mt-2 text-xs leading-relaxed text-neutral-500">
+                  Motorized deployment, anti-lift locking mechanism, and thermal testing.
+                </p>
+              </div>
+            </div>
+
+            <div class="overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm">
+              <div class="relative aspect-video w-full overflow-hidden bg-black">
+                <iframe class="h-full w-full" src="https://www.youtube.com/embed/gWw23EYM9Gs?rel=0"
+                  title="Storm & High Wind Load Deflection Test"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between">
+                  <span class="rounded-full bg-brand/10 px-3 py-1 text-[10px] font-700 uppercase tracking-wider text-brand">
+                    Live Demo
+                  </span>
+                  <span class="text-[11px] font-600 text-neutral-400">YouTube Video</span>
+                </div>
+                <h3 class="font-display mt-3 text-base font-800 text-ink">
+                  Storm & High Wind Load Deflection Test
+                </h3>
+                <p class="mt-2 text-xs leading-relaxed text-neutral-500">
+                  Extreme pressure testing demonstrating profile deflection resistance during severe storms.
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ PREV / NEXT NAVIGATION ============================ -->
+    <section class="border-t border-black/10 bg-white py-10">
+      <div class="mx-auto max-w-container px-5 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <a href="motorized-pergolas.html"
+          class="group flex items-center gap-3 text-left transition hover:text-brand">
+          <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-black/10 bg-paper transition-transform group-hover:-translate-x-1">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </span>
+          <div>
+            <span class="block text-[10px] font-700 uppercase tracking-widest text-neutral-400">Previous Solution #09</span>
+            <span class="font-display text-sm font-700 text-ink group-hover:text-brand">Bioclimatic Motorized Pergolas</span>
+          </div>
+        </a>
+
+        <a href="../products.html"
+          class="rounded-full bg-paper px-6 py-2.5 text-xs font-700 uppercase tracking-wider text-neutral-600 transition hover:bg-black/5 hover:text-ink">
+          View All 12 Products
+        </a>
+
+        <a href="manual-roll-up-fly-screens.html"
+          class="group flex items-center gap-3 text-right transition hover:text-brand">
+          <div>
+            <span class="block text-[10px] font-700 uppercase tracking-widest text-neutral-400">Next Solution #11</span>
+            <span class="font-display text-sm font-700 text-ink group-hover:text-brand">Manual Roll Up Window Fly Screens</span>
+          </div>
+          <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-black/10 bg-paper transition-transform group-hover:translate-x-1">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="border-t border-black/10 bg-ink py-16 text-white">
+    <div class="mx-auto grid max-w-container grid-cols-1 gap-10 px-5 md:grid-cols-12 md:px-8">
+      <div class="md:col-span-4">
+        <a href="../index.html" class="inline-block">
+          <img src="../images/logo.png" alt="Quality Space L.L.C" class="h-10 w-auto brightness-0 invert" />
+        </a>
+        <p class="mt-4 max-w-sm text-sm leading-relaxed text-white/60">
+          Precision German solar shading, bespoke insect protection systems, and architectural outdoor living solutions
+          tailored for luxury residential and commercial architecture across the UAE &amp; Middle East.
+        </p>
+        <div class="mt-6 flex gap-3">
+          <a href="https://www.facebook.com/share/19B5xXnbHY/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-brand hover:bg-brand"><svg
+              width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5H17V4.6C16.7 4.56 15.75 4.5 14.65 4.5c-2.35 0-3.95 1.43-3.95 4.06v2.34H8v3.1h2.7V22z" />
+            </svg></a>
+          <a href="https://www.instagram.com/qualityspacellc?stkn=NXJqMWI3dDNlbmx6" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-brand hover:bg-brand"><svg
+              width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 8.7A3.3 3.3 0 1 0 12 15.3 3.3 3.3 0 0 0 12 8.7m0-2.2c1.6 0 1.8 0 2.4.03 3.1.14 4.5 1.6 4.65 4.65.03.62.03.82.03 2.4s0 1.78-.03 2.4c-.15 3.04-1.55 4.5-4.65 4.65-.62.03-.82.03-2.4.03s-1.78 0-2.4-.03c-3.1-.15-4.5-1.62-4.65-4.65C4.92 13.78 4.92 13.58 4.92 12s0-1.78.03-2.4C5.1 6.56 6.5 5.1 9.6 4.95 10.22 4.92 10.42 4.92 12 4.92M12 3.5c-1.62 0-1.83 0-2.47.04C5.36 3.73 3.23 5.86 3.04 9.99 3 10.63 3 10.84 3 12.46s0 1.83.04 2.47c.19 4.13 2.32 6.26 6.45 6.45.64.04.85.04 2.47.04s1.83 0 2.47-.04c4.13-.19 6.26-2.32 6.45-6.45.04-.64.04-.85.04-2.47s0-1.83-.04-2.47c-.19-4.13-2.32-6.26-6.45-6.45C13.83 3.5 13.62 3.5 12 3.5m0 3.68A4.82 4.82 0 1 0 12 16.82 4.82 4.82 0 0 0 12 7.18m5.85-1.12a1.13 1.13 0 1 0 0 2.26 1.13 1.13 0 0 0 0-2.26" />
+            </svg></a>
+          <a href="https://youtube.com/@qualityspace-qsp?si=2aPfRl_K2iKHwcly" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-brand hover:bg-brand"><svg
+              width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg></a>
+        </div>
+      </div>
+
+      <div class="md:col-span-2 md:col-start-6">
+        <h4 class="text-xs font-700 uppercase tracking-[0.2em] text-white/40">Explore</h4>
+        <ul class="mt-4 space-y-2.5 text-sm text-white/60">
+          <li><a class="foot-link block hover:text-white transition" href="../about.html">About Us</a></li>
+          <li><a class="foot-link block hover:text-white transition" href="../products.html">Products</a></li>
+          <li><a class="foot-link block hover:text-white transition" href="../projects.html">Projects</a></li>
+          <li><a class="foot-link block hover:text-white transition" href="../gallery.html">Gallery</a></li>
+          <li><a class="foot-link block hover:text-white transition" href="../blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2">
+        <h4 class="text-xs font-700 uppercase tracking-[0.2em] text-white/40">Top Solutions</h4>
+        <ul class="mt-4 space-y-2.5 text-sm text-white/60">
+          <li><a class="foot-link block hover:text-white transition" href="../product-detail/q-mesh-lateral-pleated-fly-screen.html">Q Mesh Pleated Screen</a></li>
+          <li><a class="foot-link block hover:text-white transition" href="../product-detail/q90-lateral-plain-mesh-fly-screens.html">Q90 Plain Mesh Screen</a></li>
+          <li><a class="foot-link block hover:text-white transition" href="../product-detail/triangular-shades.html">Triangular Shades</a></li>
+          <li><a class="foot-link block hover:text-white transition" href="../product-detail/kheope.html">Kheope Sail Awning</a></li>
+          <li><a class="foot-link block hover:text-white transition" href="../product-detail/skylight-shades.html">Skylight Shades</a></li>
+          <li><a class="foot-link block hover:text-white transition" href="../product-detail/motorized-pergolas.html">Motorized Pergolas</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2">
+        <h4 class="text-xs font-700 uppercase tracking-[0.2em] text-white/40">Support</h4>
+        <ul class="mt-4 space-y-2.5 text-sm text-white/60">
+          <li><a class="foot-link block hover:text-white transition" href="../contact.html">Contact Us</a></li>
+          <li><a class="foot-link block hover:text-white transition" href="../contact.html#inquiry-form">Request Quote</a></li>
+          <li><a class="foot-link block hover:text-white transition" href="tel:0506632081">+971 50 663 2081</a></li>
+          <li><a class="foot-link block hover:text-white transition" href="mailto:info@qualityspace.ae">info@qualityspace.ae</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-14 max-w-container border-t border-white/10 px-5 pt-6 text-xs text-white/40 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>© <span id="year">2026</span> Quality Space L.L.C. All rights reserved.</div>
+      <div class="flex items-center gap-6">
+        <a href="../products.html" class="hover:text-white transition">Product Catalog</a>
+        <a href="../contact.html" class="hover:text-white transition">Consultation</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floater -->
+  <a href="https://wa.me/0506632081" target="_blank" rel="noopener noreferrer"
+    class="whatsapp-float fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white transition-all duration-300 hover:scale-110 active:scale-95 group"
+    aria-label="Chat on WhatsApp">
+    <span class="whatsapp-ping absolute inline-flex h-full w-full rounded-full bg-[#25D366]"></span>
+    <svg class="relative h-7 w-7 fill-current" viewBox="0 0 24 24">
+      <path
+        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+    </svg>
+  </a>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

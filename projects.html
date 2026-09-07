@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Architectural Projects Portfolio - Quality Space LLC</title>
+  <meta name="description"
+    content="Explore landmark luxury villas, hospitality resorts, and commercial installations across Dubai and the Middle East featuring German WAREMA shading systems and custom 6m insect screens." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: "#c8102e", dark: "#a00c24", light: "#e0142f" },
+            ink: "#161616",
+            paper: "#f5f4f2",
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+            display: ["Archivo", "Inter", "sans-serif"],
+          },
+          fontWeight: {
+            400: "400", 500: "500", 600: "600", 700: "700", 800: "800", 900: "900",
+          },
+          maxWidth: { container: "1216px" },
+        },
+      },
+    };
+  </script>
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+
+<body class="bg-white font-sans text-ink antialiased">
+
+  <!-- ============================ HEADER ============================ -->
+  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-white">
+    <div class="mx-auto flex max-w-container items-center justify-between px-5 py-4 md:px-8">
+      <!-- Logo -->
+      <a href="index.html"
+        class="flex items-center px-4 py-2 transition hover:bg-white">
+        <img src="images/logo.png" alt="Quality Space L.L.C - Dream it, Design it, Build it"
+          class="h-8 w-auto select-none md:h-11" />
+      </a>
+
+      <div class="flex items-center gap-3">
+        <!-- Header Contact Info -->
+        <a href="mailto:info@qualityspace.ae"
+          class="hidden items-center gap-2 rounded-full border border-black/10 bg-white/85 px-3.5 py-2 text-xs font-600 text-ink backdrop-blur shadow-sm transition hover:bg-white hover:text-brand lg:inline-flex">
+          <svg class="h-3.5 w-3.5 text-brand shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span>info@qualityspace.ae</span>
+        </a>
+
+        <a href="tel:0506632081"
+          class="hidden items-center gap-2 rounded-full border border-black/10 bg-white/85 px-3.5 py-2 text-xs font-600 text-ink backdrop-blur shadow-sm transition hover:bg-white hover:text-brand sm:inline-flex">
+          <svg class="h-3.5 w-3.5 text-brand shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <span>0506632081</span>
+        </a>
+
+        <a href="contact.html#inquiry-form"
+          class="btn-ghost hidden rounded-full bg-ink px-6 py-2.5 text-sm font-600 text-white transition sm:inline-flex">Request
+          Service</a>
+        <button id="burger"
+          class="burger relative z-[60] flex h-11 w-11 flex-col items-center justify-center gap-[5px] rounded-full border border-black/10 bg-white/70 backdrop-blur"
+          aria-label="Menu" aria-expanded="false">
+          <span class="block h-[2px] w-5 bg-ink"></span>
+          <span class="block h-[2px] w-5 bg-ink"></span>
+          <span class="block h-[2px] w-5 bg-ink"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Nav overlay -->
+  <nav id="navOverlay" class="fixed inset-0 z-[55] flex flex-col items-center justify-center bg-ink text-white">
+    <a href="index.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Home</a>
+    <a href="about.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">About Us</a>
+    <a href="products.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Products</a>
+    <a href="projects.html" class="font-display text-4xl font-800 py-3 text-brand transition">Projects</a>
+    <a href="gallery.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Gallery</a>
+    <a href="blog.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Blog</a>
+    <a href="contact.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Contact</a>
+
+    <!-- Close button -->
+    <button id="navClose"
+      class="absolute top-5 right-5 z-20 flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur transition hover:bg-white hover:text-ink hover:scale-110 active:scale-95 md:top-7 md:right-8"
+      aria-label="Close menu">
+      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </nav>
+
+  <main id="top">
+
+    <!-- ============================ HERO ============================ -->
+    <section class="relative h-[72vh] min-h-[480px] w-full overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=80"
+        alt="Panoramic architectural villa with German shading systems in Dubai"
+        class="kenburns absolute inset-0 h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+
+      <!-- Signature Brand Hero Banner matching index style -->
+      <div class="hero-brand-banner absolute bottom-16 left-0 z-20 max-w-[calc(100%-1rem)] sm:max-w-none md:bottom-20">
+        <!-- Solid Red Box -->
+        <div class="hero-red-box px-8 py-7 sm:px-12 sm:py-9 md:px-14 md:py-10"
+          style="background: linear-gradient(118deg, rgba(204, 18, 46, 0.94) 0%, rgba(186, 12, 38, 0.95) 100%);">
+          <div class="mb-2.5 flex items-center gap-2.5 text-[11px] font-700 tracking-[0.22em] text-white/90 uppercase">
+            Portfolio of Excellence · UAE &amp; Middle East
+          </div>
+          <h1
+            class="font-display font-800 text-white tracking-tight uppercase leading-[1.06] text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem]">
+            BUILT FOR THE SPACE.<br />DESIGNED TO BELONG.
+          </h1>
+        </div>
+
+        <!-- Vertical accent bars -->
+        <div class="hero-vertical-lines flex items-stretch gap-1.5 sm:gap-[7px] pl-2 sm:pl-2.5 overflow-hidden"
+          aria-hidden="true">
+          <span class="w-3.5 sm:w-4" style="background-color: rgba(200, 16, 46, 0.95);"></span>
+          <span class="w-3.5 sm:w-4" style="background-color: rgba(158, 45, 28, 0.95);"></span>
+          <span class="w-3.5 sm:w-4" style="background-color: rgba(190, 105, 76, 0.95);"></span>
+          <span class="w-3 sm:w-3.5" style="background-color: rgba(206, 155, 132, 0.95);"></span>
+          <span class="w-3 sm:w-3.5" style="background-color: rgba(181, 181, 181, 0.92);"></span>
+          <span class="w-2.5 sm:w-3" style="background-color: rgba(191, 191, 191, 0.9);"></span>
+          <span class="w-2 sm:w-2.5" style="background-color: rgba(197, 197, 197, 0.88);"></span>
+          <span class="w-2 sm:w-2" style="background-color: rgba(202, 202, 202, 0.85);"></span>
+          <span class="w-1.5 sm:w-1.5" style="background-color: rgba(208, 208, 208, 0.82);"></span>
+          <span class="w-1 sm:w-1" style="background-color: rgba(214, 214, 214, 0.8);"></span>
+          <span class="w-1 sm:w-1" style="background-color: rgba(221, 221, 221, 0.78);"></span>
+          <span class="w-0.5 sm:w-0.5" style="background-color: rgba(229, 229, 229, 0.75);"></span>
+        </div>
+      </div>
+
+      <!-- Social rail -->
+      <div
+        class="social-rail absolute right-0 top-1/2 z-10 hidden -translate-y-1/2 flex-col overflow-hidden rounded-l-xl bg-brand text-white md:flex">
+        <a href="https://www.facebook.com/share/19B5xXnbHY/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="flex h-11 w-11 items-center justify-center transition hover:bg-white hover:text-brand"><svg width="16" height="16"
+            viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5H17V4.6C16.7 4.56 15.75 4.5 14.65 4.5c-2.35 0-3.95 1.43-3.95 4.06v2.34H8v3.1h2.7V22z" />
+          </svg></a>
+        <a href="https://www.instagram.com/qualityspacellc?stkn=NXJqMWI3dDNlbmx6" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="flex h-11 w-11 items-center justify-center transition hover:bg-white hover:text-brand"><svg width="16"
+            height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 8.7A3.3 3.3 0 1 0 12 15.3 3.3 3.3 0 0 0 12 8.7m0-2.2c1.6 0 1.8 0 2.4.03 3.1.14 4.5 1.6 4.65 4.65.03.62.03.82.03 2.4s0 1.78-.03 2.4c-.15 3.04-1.55 4.5-4.65 4.65-.62.03-.82.03-2.4.03s-1.78 0-2.4-.03c-3.1-.15-4.5-1.62-4.65-4.65C4.92 13.78 4.92 13.58 4.92 12s0-1.78.03-2.4C5.1 6.56 6.5 5.1 9.6 4.95 10.22 4.92 10.42 4.92 12 4.92M12 3.5c-1.62 0-1.83 0-2.47.04C5.36 3.73 3.23 5.86 3.04 9.99 3 10.63 3 10.84 3 12.46s0 1.83.04 2.47c.19 4.13 2.32 6.26 6.45 6.45.64.04.85.04 2.47.04s1.83 0 2.47-.04c4.13-.19 6.26-2.32 6.45-6.45.04-.64.04-.85.04-2.47s0-1.83-.04-2.47c-.19-4.13-2.32-6.26-6.45-6.45C13.83 3.5 13.62 3.5 12 3.5m0 3.68A4.82 4.82 0 1 0 12 16.82 4.82 4.82 0 0 0 12 7.18m5.85-1.12a1.13 1.13 0 1 0 0 2.26 1.13 1.13 0 0 0 0-2.26" />
+          </svg></a>
+        <a href="https://youtube.com/@qualityspace-qsp?si=2aPfRl_K2iKHwcly" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="flex h-11 w-11 items-center justify-center transition hover:bg-white hover:text-brand"><svg width="16"
+            height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+          </svg></a>
+      </div>
+    </section>
+
+    <!-- ============================ CATEGORY FILTER BAR ============================ -->
+    <section class="border-b border-black/10 bg-white sticky top-[73px] z-30 shadow-sm backdrop-blur-md bg-white/95">
+      <div
+        class="mx-auto flex max-w-container items-center justify-between overflow-x-auto px-5 py-4 scrollbar-none md:px-8">
+        <div class="flex items-center gap-2" id="projectFilters">
+          <button
+            class="project-filter-btn active rounded-full border border-black/15 bg-brand px-5 py-2 text-xs font-700 uppercase tracking-wider text-white"
+            data-category="all">
+            All Projects
+          </button>
+          <button
+            class="project-filter-btn rounded-full border border-black/15 bg-paper px-5 py-2 text-xs font-700 uppercase tracking-wider text-neutral-600 hover:border-brand"
+            data-category="commercial">
+            Commercial &amp; Facades (7)
+          </button>
+          <button
+            class="project-filter-btn rounded-full border border-black/15 bg-paper px-5 py-2 text-xs font-700 uppercase tracking-wider text-neutral-600 hover:border-brand"
+            data-category="hospitality">
+            Hospitality &amp; Cultural (2)
+          </button>
+          <button
+            class="project-filter-btn rounded-full border border-black/15 bg-paper px-5 py-2 text-xs font-700 uppercase tracking-wider text-neutral-600 hover:border-brand"
+            data-category="residential">
+            Luxury Residential (1)
+          </button>
+        </div>
+
+        <div class="hidden text-xs font-600 text-neutral-400 md:block">
+          Showing <span id="projectCount" class="font-700 text-ink">10</span> Landmark Projects
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ FEATURED LEAD PROJECT ============================ -->
+    <section class="mx-auto max-w-container px-5 pt-12 pb-16 md:px-8 md:pt-16">
+      <div class="reveal">
+        <div
+          class="project-card group block overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm transition hover:shadow-xl">
+          <div class="grid lg:grid-cols-12">
+            <!-- Image Column -->
+            <div class="relative min-h-[360px] overflow-hidden lg:col-span-7 bg-paper">
+              <img
+                src="https://images.adsttc.com/media/images/51de/2ce5/e8e4/4eed/7200/007c/newsletter/SowwahSquare_Ext-SecuritiesExchange%28ADX%29Headuarters_%28c%29MubadalaRealEstate_Infrastructure.jpg?1373514967"
+                alt="Sowwah Square Island Financial Center – 4 Towers"
+                class="project-thumb absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent"></div>
+              <div class="absolute bottom-6 left-6 flex flex-wrap items-center gap-2.5">
+                <span
+                  class="rounded-full bg-brand px-3.5 py-1 text-xs font-700 uppercase tracking-wider text-white shadow-sm">
+                  Featured Landmark Project
+                </span>
+                <span class="rounded-full bg-black/60 px-3 py-1 text-xs font-600 text-white backdrop-blur">
+                  Al Maryah Island · Abu Dhabi
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Column -->
+            <div class="flex flex-col justify-between p-8 lg:col-span-5 lg:p-12">
+              <div>
+                <div class="flex items-center gap-2 text-xs font-700 uppercase tracking-widest text-brand">
+                  <span class="h-2 w-2 rounded-full bg-brand"></span>
+                  Financial Center – 4 Towers
+                </div>
+                <h2
+                  class="font-display mt-3 text-2xl font-800 leading-tight text-ink transition group-hover:text-brand md:text-3xl">
+                  Sowwah Square Island
+                </h2>
+                <div
+                  class="mt-2.5 inline-block rounded-full bg-brand/10 px-3 py-1 text-[11px] font-800 tracking-wider text-brand uppercase">
+                  Venetian Blinds at Double Skin Facade
+                </div>
+                <p class="mt-4 text-sm leading-relaxed text-neutral-600">
+                  Precision motorized external Venetian blinds integrated inside the architectural double-skin glass
+                  envelope of the four financial towers, preventing severe solar heat transmission while harvesting
+                  daylight.
+                </p>
+
+                <!-- Spec Pills -->
+                <div class="mt-6 flex flex-wrap gap-2">
+                  <span
+                    class="spec-badge rounded-full bg-paper px-3 py-1 text-xs font-600 text-neutral-700 border border-black/5">Double
+                    Skin Facade</span>
+                  <span
+                    class="spec-badge rounded-full bg-paper px-3 py-1 text-xs font-600 text-neutral-700 border border-black/5">4
+                    Commercial Towers</span>
+                  <span
+                    class="spec-badge rounded-full bg-paper px-3 py-1 text-xs font-600 text-neutral-700 border border-black/5">Automated
+                    Sun-Tracking</span>
+                  <span
+                    class="spec-badge rounded-full bg-paper px-3 py-1 text-xs font-600 text-neutral-700 border border-black/5">WAREMA
+                    80mm Slats</span>
+                </div>
+              </div>
+
+              <div class="mt-8 pt-6 border-t border-black/10 flex items-center justify-between">
+                <div>
+                  <span class="text-[11px] font-700 uppercase tracking-wider text-neutral-400">Engineering</span>
+                  <p class="text-xs font-800 text-ink">WAREMA Germany</p>
+                </div>
+
+                <a href="contact.html#inquiry-form"
+                  class="inline-flex items-center gap-1.5 text-xs font-700 uppercase tracking-wider text-brand hover:underline">
+                  Inquire Specifications
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ PROJECTS GRID ============================ -->
+    <section class="bg-paper py-16 md:py-24">
+      <div class="mx-auto max-w-container px-5 md:px-8">
+        <div class="reveal mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <span class="text-xs font-700 uppercase tracking-[0.2em] text-brand">Proven Track Record</span>
+            <h2 class="font-display h-lg mt-2 text-ink">Landmark Projects Across the Gulf</h2>
+          </div>
+          <p class="max-w-md text-sm text-neutral-500">
+            Engineered solutions installed across five-star luxury resorts, prestige corporate headquarters, and
+            architectural masterworks.
+          </p>
+        </div>
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3" id="projectsGrid">
+
+          <!-- Project 1: Sowwah Square Island - Financial Center -->
+          <article
+            class="project-card reveal flex flex-col rounded-3xl border border-black/10 bg-white overflow-hidden shadow-sm transition duration-300 hover:shadow-xl hover:-translate-y-1"
+            data-category="commercial">
+            <div class="relative h-64 overflow-hidden bg-paper">
+              <img
+                src="https://images.adsttc.com/media/images/51de/2ce5/e8e4/4eed/7200/007c/newsletter/SowwahSquare_Ext-SecuritiesExchange%28ADX%29Headuarters_%28c%29MubadalaRealEstate_Infrastructure.jpg?1373514967"
+                alt="Sowwah Square Island Financial Center – 4 Towers"
+                class="project-thumb h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span
+                  class="rounded-full bg-brand px-2.5 py-0.5 text-[11px] font-800 uppercase tracking-wider text-white shadow-sm">
+                  01
+                </span>
+                <span
+                  class="rounded-full bg-white/90 px-3 py-1 text-[11px] font-700 uppercase tracking-wider text-ink backdrop-blur">
+                  Commercial &amp; Facades
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="text-[11px] font-600 text-white/80">Financial Center – 4 Towers · Abu Dhabi</span>
+                <h3 class="font-display text-lg font-800 leading-tight">Sowwah Square Island</h3>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <span
+                  class="inline-block rounded-full bg-brand/10 px-3 py-1 text-[10px] font-800 tracking-wider text-brand uppercase mb-2.5">
+                  Venetian Blinds at Double Skin Facade
+                </span>
+                <p class="text-xs leading-relaxed text-neutral-500">
+                  Precision motorized external Venetian blinds integrated inside the multi-tier double skin glass facade
+                  of the four towers, minimizing heat gain and glare.
+                </p>
+              </div>
+              <div class="mt-5 pt-4 border-t border-black/10 flex items-center justify-between">
+                <span class="text-[11px] font-700 text-neutral-400 uppercase">Double Skin Facade</span>
+                <a href="contact.html#inquiry-form"
+                  class="inline-flex items-center gap-1 text-xs font-700 uppercase tracking-wider text-brand hover:underline">
+                  Inquire Project &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Arcapita -->
+          <article
+            class="project-card reveal flex flex-col rounded-3xl border border-black/10 bg-white overflow-hidden shadow-sm transition duration-300 hover:shadow-xl hover:-translate-y-1"
+            data-category="commercial" data-delay="1">
+            <div class="relative h-64 overflow-hidden bg-paper">
+              <img src="https://www.som.com/wp-content/uploads/2021/08/205280_000_N231_large-scaled.jpg"
+                alt="Arcapita Headquarters"
+                class="project-thumb h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span
+                  class="rounded-full bg-brand px-2.5 py-0.5 text-[11px] font-800 uppercase tracking-wider text-white shadow-sm">
+                  02
+                </span>
+                <span
+                  class="rounded-full bg-white/90 px-3 py-1 text-[11px] font-700 uppercase tracking-wider text-ink backdrop-blur">
+                  Commercial &amp; Facades
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="text-[11px] font-600 text-white/80">Head Quarter · Bahrain Bay</span>
+                <h3 class="font-display text-lg font-800 leading-tight">Arcapita</h3>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <span
+                  class="inline-block rounded-full bg-brand/10 px-3 py-1 text-[10px] font-800 tracking-wider text-brand uppercase mb-2.5">
+                  Day Light Guiding Blinds with Annual Shading
+                </span>
+                <p class="text-xs leading-relaxed text-neutral-500">
+                  Daylight-guiding concave blinds calibrated with annual sun-tracking parameters, eliminating direct
+                  solar glare across the landmark cantilevered structure.
+                </p>
+              </div>
+              <div class="mt-5 pt-4 border-t border-black/10 flex items-center justify-between">
+                <span class="text-[11px] font-700 text-neutral-400 uppercase">Daylight Guiding</span>
+                <a href="contact.html#inquiry-form"
+                  class="inline-flex items-center gap-1 text-xs font-700 uppercase tracking-wider text-brand hover:underline">
+                  Inquire Project &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Sowwah Square Island - Stock Exchange -->
+          <article
+            class="project-card reveal flex flex-col rounded-3xl border border-black/10 bg-white overflow-hidden shadow-sm transition duration-300 hover:shadow-xl hover:-translate-y-1"
+            data-category="commercial" data-delay="2">
+            <div class="relative h-64 overflow-hidden bg-paper">
+              <img
+                src="https://images.adsttc.com/media/images/51de/2c83/e8e4/4ef6/4a00/007a/large_jpg/SowwahSquare_Ext-TowerBase_%28c%29LesterAli.jpg?1373514864"
+                alt="Sowwah Square Island Stock Exchange"
+                class="project-thumb h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span
+                  class="rounded-full bg-brand px-2.5 py-0.5 text-[11px] font-800 uppercase tracking-wider text-white shadow-sm">
+                  03
+                </span>
+                <span
+                  class="rounded-full bg-white/90 px-3 py-1 text-[11px] font-700 uppercase tracking-wider text-ink backdrop-blur">
+                  Commercial &amp; Facades
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="text-[11px] font-600 text-white/80">Stock Exchange · Abu Dhabi</span>
+                <h3 class="font-display text-lg font-800 leading-tight">Sowwah Square Island</h3>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <span
+                  class="inline-block rounded-full bg-brand/10 px-3 py-1 text-[10px] font-800 tracking-wider text-brand uppercase mb-2.5">
+                  Motorized Shades
+                </span>
+                <p class="text-xs leading-relaxed text-neutral-500">
+                  Large-span motorized solar shade systems deployed across the distinctive elevated glass cube atrium of
+                  the Abu Dhabi Securities Exchange.
+                </p>
+              </div>
+              <div class="mt-5 pt-4 border-t border-black/10 flex items-center justify-between">
+                <span class="text-[11px] font-700 text-neutral-400 uppercase">Motorized Shades</span>
+                <a href="contact.html#inquiry-form"
+                  class="inline-flex items-center gap-1 text-xs font-700 uppercase tracking-wider text-brand hover:underline">
+                  Inquire Project &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Etihad Towers -->
+          <article
+            class="project-card reveal flex flex-col rounded-3xl border border-black/10 bg-white overflow-hidden shadow-sm transition duration-300 hover:shadow-xl hover:-translate-y-1"
+            data-category="commercial">
+            <div class="relative h-64 overflow-hidden bg-paper">
+              <img src="https://aecom.com/wp-content/uploads/2017/01/ETIHAD-SSN1_034.jpg" alt="Etihad Towers Abu Dhabi"
+                class="project-thumb h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span
+                  class="rounded-full bg-brand px-2.5 py-0.5 text-[11px] font-800 uppercase tracking-wider text-white shadow-sm">
+                  04
+                </span>
+                <span
+                  class="rounded-full bg-white/90 px-3 py-1 text-[11px] font-700 uppercase tracking-wider text-ink backdrop-blur">
+                  Commercial &amp; Facades
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="text-[11px] font-600 text-white/80">Abu Dhabi</span>
+                <h3 class="font-display text-lg font-800 leading-tight">Etihad Towers</h3>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <span
+                  class="inline-block rounded-full bg-brand/10 px-3 py-1 text-[10px] font-800 tracking-wider text-brand uppercase mb-2.5">
+                  Motorized Roller Shade
+                </span>
+                <p class="text-xs leading-relaxed text-neutral-500">
+                  Automated architectural motorized roller shades engineered for high-altitude coastal exposures across
+                  executive towers, featuring metallized solar-reflective textiles.
+                </p>
+              </div>
+              <div class="mt-5 pt-4 border-t border-black/10 flex items-center justify-between">
+                <span class="text-[11px] font-700 text-neutral-400 uppercase">Roller Shades</span>
+                <a href="contact.html#inquiry-form"
+                  class="inline-flex items-center gap-1 text-xs font-700 uppercase tracking-wider text-brand hover:underline">
+                  Inquire Project &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Aldar Headquarters -->
+          <article
+            class="project-card reveal flex flex-col rounded-3xl border border-black/10 bg-white overflow-hidden shadow-sm transition duration-300 hover:shadow-xl hover:-translate-y-1"
+            data-category="commercial" data-delay="1">
+            <div class="relative h-64 overflow-hidden bg-paper">
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/61f3e4fe46e4ed1160bd6275/31003b69-90f1-4dcd-bbfd-52b368a5c0f3/4.jpg"
+                alt="Aldar Headquarters"
+                class="project-thumb h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span
+                  class="rounded-full bg-brand px-2.5 py-0.5 text-[11px] font-800 uppercase tracking-wider text-white shadow-sm">
+                  05
+                </span>
+                <span
+                  class="rounded-full bg-white/90 px-3 py-1 text-[11px] font-700 uppercase tracking-wider text-ink backdrop-blur">
+                  Commercial &amp; Facades.
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="text-[11px] font-600 text-white/80">Head Quarter FLR 11, 12 &amp; 13 · Abu Dhabi</span>
+                <h3 class="font-display text-lg font-800 leading-tight">Aldar</h3>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <span
+                  class="inline-block rounded-full bg-brand/10 px-3 py-1 text-[10px] font-800 tracking-wider text-brand uppercase mb-2.5">
+                  Special Shaped Shades
+                </span>
+                <p class="text-xs leading-relaxed text-neutral-500">
+                  Custom-engineered special-shaped shades designed to accommodate the non-rectilinear diagrid perimeter
+                  glazing of the landmark circular Aldar Headquarters.
+                </p>
+              </div>
+              <div class="mt-5 pt-4 border-t border-black/10 flex items-center justify-between">
+                <span class="text-[11px] font-700 text-neutral-400 uppercase">Special Shaped</span>
+                <a href="contact.html#inquiry-form"
+                  class="inline-flex items-center gap-1 text-xs font-700 uppercase tracking-wider text-brand hover:underline">
+                  Inquire Project &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Central Market -->
+          <article
+            class="project-card reveal flex flex-col rounded-3xl border border-black/10 bg-white overflow-hidden shadow-sm transition duration-300 hover:shadow-xl hover:-translate-y-1"
+            data-category="commercial" data-delay="2">
+            <div class="relative h-64 overflow-hidden bg-paper">
+              <img
+                src="https://images.adsttc.com/media/images/5444/7279/c07a/801f/e700/0584/newsletter/1431_FP442311.jpg?1413771868"
+                alt="Central Market Abu Dhabi"
+                class="project-thumb h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span
+                  class="rounded-full bg-brand px-2.5 py-0.5 text-[11px] font-800 uppercase tracking-wider text-white shadow-sm">
+                  06
+                </span>
+                <span
+                  class="rounded-full bg-white/90 px-3 py-1 text-[11px] font-700 uppercase tracking-wider text-ink backdrop-blur">
+                  Commercial &amp; Facades
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="text-[11px] font-600 text-white/80">Abu Dhabi</span>
+                <h3 class="font-display text-lg font-800 leading-tight">Central Market</h3>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <span
+                  class="inline-block rounded-full bg-brand/10 px-3 py-1 text-[10px] font-800 tracking-wider text-brand uppercase mb-2.5">
+                  Venetian Blinds at Double Skin Facade
+                </span>
+                <p class="text-xs leading-relaxed text-neutral-500">
+                  Automated external Venetian blind systems installed within the ventilated double skin glass facade,
+                  achieving dynamic sun deflection and significant cooling load savings.
+                </p>
+              </div>
+              <div class="mt-5 pt-4 border-t border-black/10 flex items-center justify-between">
+                <span class="text-[11px] font-700 text-neutral-400 uppercase">Double Skin Facade</span>
+                <a href="contact.html#inquiry-form"
+                  class="inline-flex items-center gap-1 text-xs font-700 uppercase tracking-wider text-brand hover:underline">
+                  Inquire Project &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 7: Etisalat Bld. -->
+          <article
+            class="project-card reveal flex flex-col rounded-3xl border border-black/10 bg-white overflow-hidden shadow-sm transition duration-300 hover:shadow-xl hover:-translate-y-1"
+            data-category="commercial">
+            <div class="relative h-64 overflow-hidden bg-paper">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlpz98uuJWaWQyhz_9HWqZf2YNPkgumh-qEcsZanheWXMiI7sevqzaqUaN&s=10"
+                alt="Etisalat Bld. Al Kifaf"
+                class="project-thumb h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span
+                  class="rounded-full bg-brand px-2.5 py-0.5 text-[11px] font-800 uppercase tracking-wider text-white shadow-sm">
+                  07
+                </span>
+                <span
+                  class="rounded-full bg-white/90 px-3 py-1 text-[11px] font-700 uppercase tracking-wider text-ink backdrop-blur">
+                  Commercial &amp; Facades
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="text-[11px] font-600 text-white/80">Al Kifaf · Dubai</span>
+                <h3 class="font-display text-lg font-800 leading-tight">Etisalat Bld.</h3>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <span
+                  class="inline-block rounded-full bg-brand/10 px-3 py-1 text-[10px] font-800 tracking-wider text-brand uppercase mb-2.5">
+                  Roller Shades
+                </span>
+                <p class="text-xs leading-relaxed text-neutral-500">
+                  Commercial motorized roller shading installations throughout extensive glazed elevations, ensuring
+                  thermal comfort and anti-glare screen visibility.
+                </p>
+              </div>
+              <div class="mt-5 pt-4 border-t border-black/10 flex items-center justify-between">
+                <span class="text-[11px] font-700 text-neutral-400 uppercase">Roller Shades</span>
+                <a href="contact.html#inquiry-form"
+                  class="inline-flex items-center gap-1 text-xs font-700 uppercase tracking-wider text-brand hover:underline">
+                  Inquire Project &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 8: LOUVRE ABUDHABI MUSEUM -->
+          <article
+            class="project-card reveal flex flex-col rounded-3xl border border-black/10 bg-white overflow-hidden shadow-sm transition duration-300 hover:shadow-xl hover:-translate-y-1"
+            data-category="hospitality" data-delay="1">
+            <div class="relative h-64 overflow-hidden bg-paper">
+              <img src="https://images.trvl-media.com/place/553248621560904133/0b49858a-e085-449c-bd25-6d8fab79e2d8.jpg"
+                alt="Louvre Abu Dhabi Museum"
+                class="project-thumb h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span
+                  class="rounded-full bg-brand px-2.5 py-0.5 text-[11px] font-800 uppercase tracking-wider text-white shadow-sm">
+                  08
+                </span>
+                <span
+                  class="rounded-full bg-white/90 px-3 py-1 text-[11px] font-700 uppercase tracking-wider text-ink backdrop-blur">
+                  Hospitality &amp; Cultural
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="text-[11px] font-600 text-white/80">Saadiyat Island · Abu Dhabi</span>
+                <h3 class="font-display text-lg font-800 leading-tight">LOUVRE ABUDHABI MUSEUM</h3>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <span
+                  class="inline-block rounded-full bg-brand/10 px-3 py-1 text-[10px] font-800 tracking-wider text-brand uppercase mb-2.5">
+                  Motorized Shades
+                </span>
+                <p class="text-xs leading-relaxed text-neutral-500">
+                  Custom motorized shading systems beneath the iconic floating dome, providing calibrated solar light
+                  filtering and UV protection for world art galleries.
+                </p>
+              </div>
+              <div class="mt-5 pt-4 border-t border-black/10 flex items-center justify-between">
+                <span class="text-[11px] font-700 text-neutral-400 uppercase">Museum Shading</span>
+                <a href="contact.html#inquiry-form"
+                  class="inline-flex items-center gap-1 text-xs font-700 uppercase tracking-wider text-brand hover:underline">
+                  Inquire Project &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 9: Kempinski Hotel Palm Jumeirah -->
+          <article
+            class="project-card reveal flex flex-col rounded-3xl border border-black/10 bg-white overflow-hidden shadow-sm transition duration-300 hover:shadow-xl hover:-translate-y-1"
+            data-category="hospitality" data-delay="2">
+            <div class="relative h-64 overflow-hidden bg-paper">
+              <img
+                src="https://res.klook.com/klook-hotel/image/upload/w_750,c_fill,q_85/travelapi/4000000/3570000/3565900/3565885/22c51a57_z.jpg"
+                alt="Kempinski Hotel Palm Jumeirah"
+                class="project-thumb h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span
+                  class="rounded-full bg-brand px-2.5 py-0.5 text-[11px] font-800 uppercase tracking-wider text-white shadow-sm">
+                  09
+                </span>
+                <span
+                  class="rounded-full bg-white/90 px-3 py-1 text-[11px] font-700 uppercase tracking-wider text-ink backdrop-blur">
+                  Hospitality &amp; Resorts
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="text-[11px] font-600 text-white/80">Palm Jumeirah · Dubai</span>
+                <h3 class="font-display text-lg font-800 leading-tight">kempinski hotel palm Jumeirah</h3>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <span
+                  class="inline-block rounded-full bg-brand/10 px-3 py-1 text-[10px] font-800 tracking-wider text-brand uppercase mb-2.5">
+                  Cassette Awnings
+                </span>
+                <p class="text-xs leading-relaxed text-neutral-500">
+                  Full cassette motorized retractable awnings providing luxury outdoor dining shade with automated wind
+                  safety retraction and marine-grade finishes.
+                </p>
+              </div>
+              <div class="mt-5 pt-4 border-t border-black/10 flex items-center justify-between">
+                <span class="text-[11px] font-700 text-neutral-400 uppercase">Cassette Awnings</span>
+                <a href="contact.html#inquiry-form"
+                  class="inline-flex items-center gap-1 text-xs font-700 uppercase tracking-wider text-brand hover:underline">
+                  Inquire Project &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 10: XXII Carat Club Villas -->
+          <article
+            class="project-card reveal flex flex-col rounded-3xl border border-black/10 bg-white overflow-hidden shadow-sm transition duration-300 hover:shadow-xl hover:-translate-y-1"
+            data-category="residential">
+            <div class="relative h-64 overflow-hidden bg-paper">
+              <img src="https://xxiicarat.ae/amenities-1.jpg" alt="XXII Carat Club Villas Palm Jumeirah"
+                class="project-thumb h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span
+                  class="rounded-full bg-brand px-2.5 py-0.5 text-[11px] font-800 uppercase tracking-wider text-white shadow-sm">
+                  10
+                </span>
+                <span
+                  class="rounded-full bg-white/90 px-3 py-1 text-[11px] font-700 uppercase tracking-wider text-ink backdrop-blur">
+                  Luxury Residential
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="text-[11px] font-600 text-white/80">Palm Jumeirah · Dubai</span>
+                <h3 class="font-display text-lg font-800 leading-tight">XXII Carat Club Villas</h3>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <span
+                  class="inline-block rounded-full bg-brand/10 px-3 py-1 text-[10px] font-800 tracking-wider text-brand uppercase mb-2.5">
+                  Conservatory Awnings
+                </span>
+                <p class="text-xs leading-relaxed text-neutral-500">
+                  Precision motorized conservatory awnings deployed over glass verandas and beachfront terrace pergolas
+                  across luxury Mediterranean-style Palm Jumeirah estates.
+                </p>
+              </div>
+              <div class="mt-5 pt-4 border-t border-black/10 flex items-center justify-between">
+                <span class="text-[11px] font-700 text-neutral-400 uppercase">Conservatory Awnings</span>
+                <a href="contact.html#inquiry-form"
+                  class="inline-flex items-center gap-1 text-xs font-700 uppercase tracking-wider text-brand hover:underline">
+                  Inquire Project &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CONSULTATION CTA ============================ -->
+    <section class="bg-neutral-900 py-20 text-white md:py-28">
+      <div class="mx-auto max-w-container px-5 md:px-8">
+        <div class="reveal grid gap-10 lg:grid-cols-12 lg:items-center">
+          <div class="lg:col-span-8">
+            <div
+              class="inline-flex items-center gap-2 rounded-full bg-brand/20 px-3.5 py-1 text-xs font-700 tracking-wider text-brand-light uppercase">
+              <span class="h-2 w-2 rounded-full bg-brand"></span>
+              Engineering Collaboration
+            </div>
+            <h3 class="font-display mt-3 text-3xl font-800 md:text-4xl">
+              Planning a Luxury Residential or Commercial Project?
+            </h3>
+            <p class="mt-4 max-w-2xl text-sm leading-relaxed text-white/70">
+              Our engineering studio works directly with architectural consultants, interior designers, and general
+              contractors from concept design through to factory fabrication and certified installation across the UAE
+              and GCC.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-3.5 sm:flex-row lg:col-span-4 lg:justify-end">
+            <a href="contact.html#inquiry-form"
+              class="btn-pill bg-brand px-8 py-4 text-sm font-700 text-white transition hover:bg-brand-dark justify-center">
+              Request Site Survey
+              <span class="ico flex h-7 w-7 items-center justify-center rounded-full bg-white/20">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </span>
+            </a>
+            <a href="tel:+97148868831"
+              class="rounded-full border border-white/25 px-6 py-4 text-center text-sm font-700 text-white transition hover:border-white hover:bg-white/10">
+              Call Office
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="bg-ink pb-10 pt-16 text-white border-t border-white/10">
+    <div class="mx-auto grid max-w-container gap-10 px-5 md:grid-cols-12 md:px-8">
+      <div class="md:col-span-4">
+        <div class="inline-flex rounded-lg bg-white px-4 py-3">
+          <img src="images/logo.png" alt="Quality Space L.L.C" class="h-10 w-auto select-none" />
+        </div>
+        <p class="mt-6 text-sm leading-relaxed text-white/80">
+          MK GHANIM WAREHOUSE - WAREHOUSE NO 7<br />
+          Al Asayel St - near AL QUOZ MALL<br />
+          Al Qouz Ind.third - Al Quoz - Dubai
+        </p>
+        <p class="mt-3 text-sm text-white/60">Telephone: <a href="tel:+97148868831"
+            class="text-white/80 hover:text-white">+971 48868831</a></p>
+        <p class="text-sm text-white/60">Mobile: <a href="tel:+97148868895" class="text-white/80 hover:text-white">+971
+            48868895</a> / <a href="tel:+971553574774" class="text-white/80 hover:text-white">+971 553574774</a></p>
+        <a href="mailto: info@qualityspace.ae" class="mt-1 block text-sm text-white/60 hover:text-white">
+          info@qualityspace.ae</a>
+        <div class="mt-6 flex gap-3">
+          <a href="https://www.facebook.com/share/19B5xXnbHY/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-brand hover:bg-brand"><svg
+              width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5H17V4.6C16.7 4.56 15.75 4.5 14.65 4.5c-2.35 0-3.95 1.43-3.95 4.06v2.34H8v3.1h2.7V22z" />
+            </svg></a>
+          <a href="https://www.instagram.com/qualityspacellc?stkn=NXJqMWI3dDNlbmx6" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-brand hover:bg-brand"><svg
+              width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 8.7A3.3 3.3 0 1 0 12 15.3 3.3 3.3 0 0 0 12 8.7m0-2.2c1.6 0 1.8 0 2.4.03 3.1.14 4.5 1.6 4.65 4.65.03.62.03.82.03 2.4s0 1.78-.03 2.4c-.15 3.04-1.55 4.5-4.65 4.65-.62.03-.82.03-2.4.03s-1.78 0-2.4-.03c-3.1-.15-4.5-1.62-4.65-4.65C4.92 13.78 4.92 13.58 4.92 12s0-1.78.03-2.4C5.1 6.56 6.5 5.1 9.6 4.95 10.22 4.92 10.42 4.92 12 4.92M12 3.5c-1.62 0-1.83 0-2.47.04C5.36 3.73 3.23 5.86 3.04 9.99 3 10.63 3 10.84 3 12.46s0 1.83.04 2.47c.19 4.13 2.32 6.26 6.45 6.45.64.04.85.04 2.47.04s1.83 0 2.47-.04c4.13-.19 6.26-2.32 6.45-6.45.04-.64.04-.85.04-2.47s0-1.83-.04-2.47c-.19-4.13-2.32-6.26-6.45-6.45C13.83 3.5 13.62 3.5 12 3.5m0 3.68A4.82 4.82 0 1 0 12 16.82 4.82 4.82 0 0 0 12 7.18m5.85-1.12a1.13 1.13 0 1 0 0 2.26 1.13 1.13 0 0 0 0-2.26" />
+            </svg></a>
+          <a href="https://youtube.com/@qualityspace-qsp?si=2aPfRl_K2iKHwcly" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-brand hover:bg-brand"><svg
+              width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg></a>
+        </div>
+      </div>
+
+      <div class="md:col-span-2 md:col-start-6">
+        <h4 class="text-xs font-700 uppercase tracking-[0.2em] text-white/40">Explore</h4>
+        <ul class="mt-4 space-y-2.5 text-sm text-white/60">
+          <li><a class="foot-link block" href="about.html">About Us</a></li>
+          <li><a class="foot-link block" href="products.html">Products</a></li>
+          <li><a class="foot-link block text-brand" href="projects.html">Projects</a></li>
+          <li><a class="foot-link block" href="gallery.html">Gallery</a></li>
+          <li><a class="foot-link block" href="blog.html">Blog</a></li>
+          <li><a class="foot-link block" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2">
+        <h4 class="text-xs font-700 uppercase tracking-[0.2em] text-white/40">Products</h4>
+        <ul class="mt-4 space-y-2.5 text-sm text-white/60">
+          <li><a class="foot-link block" href="about.html#warema">WAREMA Facade Awnings</a></li>
+          <li><a class="foot-link block" href="about.html#warema">Cassette Arm Awnings</a></li>
+          <li><a class="foot-link block" href="about.html#warema">External Venetian Blinds</a></li>
+          <li><a class="foot-link block" href="about.html#insect-screens">6M Insect Screens</a></li>
+          <li><a class="foot-link block" href="about.html#insect-screens">Sliding Door Screens</a></li>
+          <li><a class="foot-link block" href="about.html#warema">Roller Shutters</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2">
+        <h4 class="text-xs font-700 uppercase tracking-[0.2em] text-white/40">Support</h4>
+        <ul class="mt-4 space-y-2.5 text-sm text-white/60">
+          <li><a class="foot-link block" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-14 max-w-container border-t border-white/10 px-5 pt-6 text-xs text-white/40 md:px-8">
+      © <span id="year">2026</span> Quality Space L.L.C. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floater -->
+  <a href="https://wa.me/0506632081" target="_blank" rel="noopener noreferrer"
+    class="whatsapp-float fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white transition-all duration-300 hover:scale-110 active:scale-95 group"
+    aria-label="Chat on WhatsApp">
+    <span class="whatsapp-ping absolute inline-flex h-full w-full rounded-full bg-[#25D366]"></span>
+    <svg class="relative h-7 w-7 fill-current" viewBox="0 0 24 24">
+      <path
+        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+    </svg>
+    <span
+      class="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-lg bg-ink px-3 py-1.5 text-xs font-600 text-white shadow-lg opacity-0 transition-opacity duration-200 group-hover:opacity-100 hidden sm:block">
+      Chat on WhatsApp
+    </span>
+  </a>
+
+  <script src="script.js"></script>
+  <script>
+    // Client-side category filtering for projects
+    const pFilters = document.querySelectorAll('.project-filter-btn');
+    const pArticles = document.querySelectorAll('#projectsGrid article');
+    const pCount = document.getElementById('projectCount');
+
+    pFilters.forEach(btn => {
+      btn.addEventListener('click', () => {
+        pFilters.forEach(b => {
+          b.classList.remove('active', 'bg-brand', 'text-white');
+          b.classList.add('bg-paper', 'text-neutral-600');
+        });
+        btn.classList.add('active', 'bg-brand', 'text-white');
+        btn.classList.remove('bg-paper', 'text-neutral-600');
+
+        const cat = btn.getAttribute('data-category');
+        let count = 0;
+
+        pArticles.forEach(art => {
+          const artCats = art.getAttribute('data-category') || '';
+          if (cat === 'all' || artCats.includes(cat)) {
+            art.style.display = 'flex';
+            count++;
+          } else {
+            art.style.display = 'none';
+          }
+        });
+
+        if (pCount) pCount.textContent = count;
+      });
+    });
+  </script>
+</body>
+
+</html>

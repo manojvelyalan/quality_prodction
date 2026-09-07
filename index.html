@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quality Space - Dream it. Design it. Build it.</title>
+  <meta name="description"
+    content="Quality Space is a UAE-based provider of premium shading, screening and architectural outdoor solutions." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: "#c8102e", dark: "#a00c24", light: "#e0142f" },
+            ink: "#161616",
+            paper: "#f5f4f2",
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+            display: ["Archivo", "Inter", "sans-serif"],
+          },
+          fontWeight: {
+            400: "400", 500: "500", 600: "600", 700: "700", 800: "800", 900: "900",
+          },
+          maxWidth: { container: "1216px" },
+        },
+      },
+    };
+  </script>
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+
+<body class="bg-white font-sans text-ink antialiased">
+
+  <!-- ============================ HEADER ============================ -->
+  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-white">
+    <div class="mx-auto flex max-w-container items-center justify-between px-5 py-4 md:px-8">
+      <!-- Logo -->
+      <a href="#top"
+        class="flex items-center px-4 py-2 transition hover:bg-white">
+        <img src="images/logo.png" alt="Quality Space L.L.C - Dream it, Design it, Build it"
+          class="h-8 w-auto select-none md:h-11" />
+      </a>
+
+      <div class="flex items-center gap-3">
+        <!-- Header Contact Info -->
+        <a href="mailto:info@qualityspace.ae"
+          class="hidden items-center gap-2 rounded-full border border-black/10 bg-white/85 px-3.5 py-2 text-xs font-600 text-ink backdrop-blur shadow-sm transition hover:bg-white hover:text-brand lg:inline-flex">
+          <svg class="h-3.5 w-3.5 text-brand shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span>info@qualityspace.ae</span>
+        </a>
+
+        <a href="tel:0506632081"
+          class="hidden items-center gap-2 rounded-full border border-black/10 bg-white/85 px-3.5 py-2 text-xs font-600 text-ink backdrop-blur shadow-sm transition hover:bg-white hover:text-brand sm:inline-flex">
+          <svg class="h-3.5 w-3.5 text-brand shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <span>0506632081</span>
+        </a>
+
+        <a href="contact.html#inquiry-form"
+          class="btn-ghost hidden rounded-full bg-ink px-6 py-2.5 text-sm font-600 text-white transition sm:inline-flex">Request
+          Service</a>
+        <button id="burger"
+          class="burger relative z-[60] flex h-11 w-11 flex-col items-center justify-center gap-[5px] rounded-full border border-black/10 bg-white/70 backdrop-blur"
+          aria-label="Menu" aria-expanded="false">
+          <span class="block h-[2px] w-5 bg-ink"></span>
+          <span class="block h-[2px] w-5 bg-ink"></span>
+          <span class="block h-[2px] w-5 bg-ink"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Nav overlay -->
+  <nav id="navOverlay" class="fixed inset-0 z-[55] flex flex-col items-center justify-center bg-ink text-white">
+    <a href="#top" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Home</a>
+    <a href="about.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">About Us</a>
+    <a href="products.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Products</a>
+    <a href="projects.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Projects</a>
+    <a href="gallery.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Gallery</a>
+    <a href="blog.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Blog</a>
+    <a href="contact.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Contact</a>
+
+    <!-- Close button -->
+    <button id="navClose"
+      class="absolute top-5 right-5 z-20 flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur transition hover:bg-white hover:text-ink hover:scale-110 active:scale-95 md:top-7 md:right-8"
+      aria-label="Close menu">
+      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </nav>
+
+  <main id="top">
+
+    <!-- ============================ HERO ============================ -->
+    <section class="relative h-[92vh] min-h-[560px] w-full overflow-hidden">
+      <img src="images/homepage-hero.png" alt="Contemporary building facade with architectural shading"
+        class="kenburns absolute inset-0 h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-black/45 via-black/10 to-transparent"></div>
+
+      <!-- Signature Brand Hero Banner (exact as per brand reference image) -->
+      <div class="hero-brand-banner absolute bottom-20 left-0 z-20 max-w-[calc(100%-1rem)] sm:max-w-none md:bottom-24">
+        <!-- Solid Red Box -->
+        <div class="hero-red-box px-8 py-7 sm:px-12 sm:py-9 md:px-16 md:py-10"
+          style="background: linear-gradient(118deg, rgba(204, 18, 46, 0.94) 0%, rgba(186, 12, 38, 0.95) 100%);">
+          <h1
+            class="font-display font-800 text-white tracking-tight uppercase leading-[1.06] text-3xl sm:text-4xl md:text-5xl lg:text-[3.75rem]">
+            DREAM IT.<br />DESIGN IT. BUILD IT.
+          </h1>
+        </div>
+
+        <!-- Vertical accent bars -->
+        <div class="hero-vertical-lines flex items-stretch gap-1.5 sm:gap-[7px] pl-2 sm:pl-2.5 overflow-hidden"
+          aria-hidden="true">
+          <span class="w-3.5 sm:w-4" style="background-color: rgba(200, 16, 46, 0.95);"></span>
+          <span class="w-3.5 sm:w-4" style="background-color: rgba(158, 45, 28, 0.95);"></span>
+          <span class="w-3.5 sm:w-4" style="background-color: rgba(190, 105, 76, 0.95);"></span>
+          <span class="w-3 sm:w-3.5" style="background-color: rgba(206, 155, 132, 0.95);"></span>
+          <span class="w-3 sm:w-3.5" style="background-color: rgba(181, 181, 181, 0.92);"></span>
+          <span class="w-2.5 sm:w-3" style="background-color: rgba(191, 191, 191, 0.9);"></span>
+          <span class="w-2 sm:w-2.5" style="background-color: rgba(197, 197, 197, 0.88);"></span>
+          <span class="w-2 sm:w-2" style="background-color: rgba(202, 202, 202, 0.85);"></span>
+          <span class="w-1.5 sm:w-1.5" style="background-color: rgba(208, 208, 208, 0.82);"></span>
+          <span class="w-1 sm:w-1" style="background-color: rgba(214, 214, 214, 0.8);"></span>
+          <span class="w-1 sm:w-1" style="background-color: rgba(221, 221, 221, 0.78);"></span>
+          <span class="w-0.5 sm:w-0.5" style="background-color: rgba(229, 229, 229, 0.75);"></span>
+        </div>
+      </div>
+
+      <!-- Social rail -->
+      <div
+        class="social-rail absolute right-0 top-1/2 z-10 hidden -translate-y-1/2 flex-col overflow-hidden rounded-l-xl bg-brand text-white md:flex">
+        <a href="https://www.facebook.com/share/19B5xXnbHY/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"
+          aria-label="Facebook"
+          class="flex h-11 w-11 items-center justify-center transition hover:bg-white hover:text-brand"><svg width="16"
+            height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5H17V4.6C16.7 4.56 15.75 4.5 14.65 4.5c-2.35 0-3.95 1.43-3.95 4.06v2.34H8v3.1h2.7V22z" />
+          </svg></a>
+        <a href="https://www.instagram.com/qualityspacellc?stkn=NXJqMWI3dDNlbmx6" target="_blank"
+          rel="noopener noreferrer" aria-label="Instagram"
+          class="flex h-11 w-11 items-center justify-center transition hover:bg-white hover:text-brand"><svg width="16"
+            height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 8.7A3.3 3.3 0 1 0 12 15.3 3.3 3.3 0 0 0 12 8.7m0-2.2c1.6 0 1.8 0 2.4.03 3.1.14 4.5 1.6 4.65 4.65.03.62.03.82.03 2.4s0 1.78-.03 2.4c-.15 3.04-1.55 4.5-4.65 4.65-.62.03-.82.03-2.4.03s-1.78 0-2.4-.03c-3.1-.15-4.5-1.62-4.65-4.65C4.92 13.78 4.92 13.58 4.92 12s0-1.78.03-2.4C5.1 6.56 6.5 5.1 9.6 4.95 10.22 4.92 10.42 4.92 12 4.92M12 3.5c-1.62 0-1.83 0-2.47.04C5.36 3.73 3.23 5.86 3.04 9.99 3 10.63 3 10.84 3 12.46s0 1.83.04 2.47c.19 4.13 2.32 6.26 6.45 6.45.64.04.85.04 2.47.04s1.83 0 2.47-.04c4.13-.19 6.26-2.32 6.45-6.45.04-.64.04-.85.04-2.47s0-1.83-.04-2.47c-.19-4.13-2.32-6.26-6.45-6.45C13.83 3.5 13.62 3.5 12 3.5m0 3.68A4.82 4.82 0 1 0 12 16.82 4.82 4.82 0 0 0 12 7.18m5.85-1.12a1.13 1.13 0 1 0 0 2.26 1.13 1.13 0 0 0 0-2.26" />
+          </svg></a>
+        <a href="https://youtube.com/@qualityspace-qsp?si=2aPfRl_K2iKHwcly" target="_blank" rel="noopener noreferrer"
+          aria-label="YouTube"
+          class="flex h-11 w-11 items-center justify-center transition hover:bg-white hover:text-brand"><svg width="16"
+            height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+          </svg></a>
+      </div>
+    </section>
+
+    <!-- ============================ INTRO ============================ -->
+    <section id="intro" class="mx-auto max-w-container px-5 py-20 md:px-8 md:py-28">
+      <div class="grid gap-10 md:grid-cols-12 md:gap-16">
+        <div class="reveal md:col-span-7">
+          <h2 class="font-display h-lg text-ink">
+            We create more<br class="hidden sm:block" /> comfortable spaces,<br class="hidden sm:block" />
+            without compromising<br class="hidden sm:block" /> on design.
+          </h2>
+          <a href="#solutions" class="btn-pill mt-9 bg-brand px-7 py-3.5 text-sm text-white">
+            Read more
+            <span class="ico flex h-7 w-7 items-center justify-center rounded-full bg-white/20">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div class="reveal md:col-span-5" data-delay="1">
+          <p class="max-w-md text-[15px] leading-7 text-neutral-500">
+            Quality Space is a UAE-based provider of premium shading, screening and architectural
+            outdoor solutions, bringing together European engineering and Middle Eastern expertise.
+            Our portfolio spans everything from sophisticated façade shading and retractable awnings
+            to custom insect screens for openings up to 6 metres in height.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ EXPERIENCE STRIP ============================ -->
+    <section class="reveal relative w-full overflow-hidden bg-white py-8 md:py-12">
+      <div class="relative w-full md:w-[90%]">
+        <img src="images/homepage-frame-1.png" alt="Quality Space team at work - 15 years of experience"
+          class="block w-full select-none" />
+
+        <!-- Copy -->
+        <p
+          class="font-display absolute left-[6%] top-1/2 max-w-[62%] -translate-y-1/2 text-[14px] font-700 leading-snug text-white drop-shadow-[0_2px_10px_rgba(0,0,0,.4)] sm:text-[18px] md:max-w-[46%] md:text-[26px]">
+          With over 15 years of experience, we design, supply and install systems built to perform in
+          demanding climates while complementing the architecture around them.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================ SOLUTIONS ============================ -->
+    <section id="solutions" class="mx-auto max-w-container px-5 py-20 md:px-8 md:py-28">
+      <div class="reveal flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+        <h2 class="font-display h-lg max-w-xl text-ink">Solutions designed around<br class="hidden md:block" /> the way
+          you live.</h2>
+        <a href="products.html" class="btn-pill shrink-0 bg-brand px-7 py-3.5 text-sm text-white">
+          View All 12 Products
+          <span class="ico flex h-7 w-7 items-center justify-center rounded-full bg-white/20">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </span>
+        </a>
+      </div>
+      <p class="reveal mt-6 max-w-2xl text-[15px] leading-7 text-neutral-500" data-delay="1">
+        From controlling sunlight and heat to creating comfortable outdoor spaces and protecting
+        interiors from insects, our systems combine function, technology and architectural elegance.
+      </p>
+
+      <!-- Bento grid showcasing Top 5 Flagship Products -->
+      <div id="tilesWrap"
+        class="tiles-fade mt-10 grid grid-cols-1 gap-3 md:grid-cols-12 md:grid-rows-[330px_330px_330px]">
+
+        <!-- Row 1 · Product 1: Q MESH - LATERAL PLEATED FLY SCREEN (wide) -->
+        <a href="product-detail/q-mesh-lateral-pleated-fly-screen.html"
+          class="card-tile group relative h-80 overflow-hidden rounded-lg md:col-span-8 md:h-full block">
+          <img
+            src="images/products/Q-MESH%20-LATERAL-PLEATED-FLY-SCREEN/QSP%20IMAGE/WhatsApp%20Image%202026-08-28%20at%2010.05.24%20(1).jpeg"
+            alt="Q MESH - LATERAL PLEATED FLY SCREEN"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+          <div class="veil absolute inset-0"
+            style="background:linear-gradient(0deg,rgba(140,20,25,.86) 0%,rgba(80,18,20,.38) 36%,rgba(0,0,0,0) 65%)">
+          </div>
+          <div class="absolute top-4 left-4 z-10 flex items-center gap-2">
+            <span
+              class="rounded-full bg-brand px-3 py-1 text-[11px] font-800 uppercase tracking-wider text-white shadow-sm">
+              01 · Flagship Solution
+            </span>
+          </div>
+          <div class="absolute inset-x-0 bottom-0 p-5 pr-16 z-10">
+            <h3 class="font-display text-lg sm:text-xl font-800 text-white">Q MESH - LATERAL PLEATED FLY SCREEN</h3>
+            <p class="mt-1.5 line-clamp-2 max-w-xl text-xs leading-relaxed text-white/85">
+              Barrier-free lateral pleated insect protection system with ultra-low 3mm floor track, engineered for
+              panoramic sliding doors and luxury patio openings.
+            </p>
+          </div>
+          <span
+            class="arrow-btn absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-brand text-white shadow-md transition-transform group-hover:scale-110">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17 17 7M9 7h8v8" />
+            </svg>
+          </span>
+        </a>
+
+        <!-- Row 1 · Product 2: Q90 - LATERAL PLAIN MESH FLY SCREENS -->
+        <a href="product-detail/q90-lateral-plain-mesh-fly-screens.html"
+          class="card-tile group relative h-80 overflow-hidden rounded-lg md:col-span-4 md:h-full block">
+          <img src="images/products/Q90-LATERAL-PLAIN-MESH-FLY-SCREENS/q90-lateral-plain-mesh.jpg"
+            alt="Q90 - LATERAL PLAIN MESH FLY SCREENS"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+          <div class="veil absolute inset-0"
+            style="background:linear-gradient(0deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.2) 45%,rgba(0,0,0,0) 70%)">
+          </div>
+          <div class="absolute top-4 left-4 z-10">
+            <span
+              class="rounded-full bg-white/90 px-3 py-1 text-[10px] font-800 uppercase tracking-wider text-ink backdrop-blur">
+              02 · Smooth Flat Mesh
+            </span>
+          </div>
+          <div class="absolute bottom-4 left-4 right-16 z-10">
+            <h3 class="font-display text-[16px] font-700 text-white leading-tight">Q90 - LATERAL PLAIN MESH FLY SCREENS
+            </h3>
+            <p class="mt-1 text-[11px] text-white/70 line-clamp-1">100% optical clarity with smooth barrier-free glide.
+            </p>
+          </div>
+          <span
+            class="arrow-btn absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-white/80 bg-black/20 text-white transition-transform group-hover:scale-110">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17 17 7M9 7h8v8" />
+            </svg>
+          </span>
+        </a>
+
+        <!-- Row 2 · Text block -->
+        <div
+          class="flex flex-col justify-center rounded-lg bg-paper p-6 md:col-span-4 md:row-start-2 border border-black/5">
+          <span class="text-[11px] font-700 uppercase tracking-[0.2em] text-brand">Engineered Systems</span>
+          <h3 class="font-display text-[22px] font-800 leading-[1.2] text-ink md:text-[26px] mt-2">
+            European Shading &amp; Screening Crafted for Gulf Architecture.
+          </h3>
+          <p class="mt-2 text-xs leading-relaxed text-neutral-500">
+            Explore our precision-engineered solutions with live demonstration videos, CAD specs, and technical details.
+          </p>
+        </div>
+
+        <!-- Row 2 · Product 3: TRIANGULAR SHADES (wide) -->
+        <a href="product-detail/triangular-shades.html"
+          class="card-tile group relative h-80 overflow-hidden rounded-lg md:col-span-8 md:row-start-2 md:h-full block">
+          <img src="images/products/TRIANGULAR-SHADES/20221209_111522.jpg" alt="TRIANGULAR SHADES"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+          <div class="veil absolute inset-0"
+            style="background:linear-gradient(0deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.2) 40%,rgba(0,0,0,0) 70%)">
+          </div>
+          <div class="absolute top-4 left-4 z-10">
+            <span
+              class="rounded-full bg-white/90 px-3 py-1 text-[10px] font-800 uppercase tracking-wider text-ink backdrop-blur">
+              03 · Tensile Shading
+            </span>
+          </div>
+          <div class="absolute bottom-4 left-4 right-16 z-10">
+            <h3 class="font-display text-[18px] font-800 text-white">TRIANGULAR SHADES</h3>
+            <p class="mt-1 line-clamp-1 max-w-md text-xs text-white/80">
+              Sculptural tensile membrane sails with marine 316 stainless steel rigging, blocking up to 98% UV
+              radiation.
+            </p>
+          </div>
+          <span
+            class="arrow-btn absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-white text-ink transition-transform group-hover:scale-110">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17 17 7M9 7h8v8" />
+            </svg>
+          </span>
+        </a>
+
+        <!-- Row 3 · Product 4: KHEOPE -->
+        <a href="product-detail/kheope.html"
+          class="card-tile group relative h-80 overflow-hidden rounded-lg md:col-span-4 md:row-start-3 md:h-full block">
+          <img src="images/products/KHEOPE/WhatsApp%20Image%202023-10-24%20at%2013.15.39.jpeg" alt="KHEOPE"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+          <div class="veil absolute inset-0"
+            style="background:linear-gradient(0deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.2) 45%,rgba(0,0,0,0) 70%)">
+          </div>
+          <div class="absolute top-4 left-4 z-10">
+            <span
+              class="rounded-full bg-white/90 px-3 py-1 text-[10px] font-800 uppercase tracking-wider text-ink backdrop-blur">
+              04 · Luxury Sail Awning
+            </span>
+          </div>
+          <div class="absolute bottom-4 left-4 right-16 z-10">
+            <h3 class="font-display text-[16px] font-700 text-white">KHEOPE</h3>
+            <p class="mt-0.5 text-[11px] text-white/75">Nautical motorized roller sail system.</p>
+          </div>
+          <span
+            class="arrow-btn absolute bottom-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-white text-ink transition-transform group-hover:scale-110">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17 17 7M9 7h8v8" />
+            </svg>
+          </span>
+        </a>
+
+        <!-- Row 3 · Product 5: SKYLIGHT SHADES -->
+        <a href="product-detail/skylight-shades.html"
+          class="card-tile group relative h-80 overflow-hidden rounded-lg md:col-span-4 md:row-start-3 md:h-full block">
+          <img src="images/products/SKYLIGHT-SHADES/P1010802.JPG" alt="SKYLIGHT SHADES"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+          <div class="veil absolute inset-0"
+            style="background:linear-gradient(0deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.2) 45%,rgba(0,0,0,0) 70%)">
+          </div>
+          <div class="absolute top-4 left-4 z-10">
+            <span
+              class="rounded-full bg-white/90 px-3 py-1 text-[10px] font-800 uppercase tracking-wider text-ink backdrop-blur">
+              05 · Glass Roof Shading
+            </span>
+          </div>
+          <div class="absolute bottom-4 left-4 right-16 z-10">
+            <h3 class="font-display text-[16px] font-700 text-white">SKYLIGHT SHADES</h3>
+            <p class="mt-0.5 text-[11px] text-white/75">Motorized tensioned atrium shading.</p>
+          </div>
+          <span
+            class="arrow-btn absolute bottom-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-white text-ink transition-transform group-hover:scale-110">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17 17 7M9 7h8v8" />
+            </svg>
+          </span>
+        </a>
+
+        <!-- Row 3 · View all collection (accent lines identical to the "Explore our Projects" card) -->
+        <a href="products.html"
+          class="qs-vac group relative flex h-80 flex-col overflow-hidden bg-brand text-white md:col-span-4 md:row-start-3 md:h-full">
+          <div class="flex flex-1 items-center px-5">
+            <span
+              class="flex w-full items-center justify-between rounded-full bg-white px-7 py-[18px] text-[15px] font-700 text-ink transition-transform duration-300 group-hover:-translate-y-0.5">
+              View all 12 products
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 7l10 10M17 9v8h-8" />
+              </svg>
+            </span>
+          </div>
+          <div class="qs-cf-lines">
+            <i class="bar"></i>
+            <i class="thick" style="--c:#bd7259"></i>
+            <i class="thick" style="--c:#d3a48f"></i>
+            <i style="--c:#bfbfbf"></i>
+            <i style="--c:#c2c2c2"></i>
+            <i style="--c:#c2c2c2"></i>
+            <i style="--c:#c5c5c5"></i>
+            <i style="--c:#c5c5c5"></i>
+            <i style="--c:#c8c8c8"></i>
+            <i style="--c:#cbcbcb"></i>
+            <i style="--c:#cecece"></i>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================ PROJECTS ============================ -->
+    <section id="projects" class="mx-auto max-w-container px-5 py-20 md:px-8 md:py-28">
+      <div class="grid gap-8 md:grid-cols-12 md:gap-16">
+        <div class="reveal md:col-span-7">
+          <p class="text-sm font-600 text-neutral-400">Designed for architecture. Proven in the real world.</p>
+          <h2 class="font-display h-lg mt-3 text-ink">Built for the space.<br />Designed to belong.</h2>
+        </div>
+        <div class="reveal md:col-span-5 md:self-end" data-delay="1">
+          <p class="max-w-md text-[15px] leading-7 text-neutral-500">
+            From iconic financial centers and corporate headquarters to national museums and luxury beachfront villas,
+            our engineering brings together function, performance and architectural distinction.
+          </p>
+        </div>
+      </div>
+
+      <!-- Coverflow: featured slide (colour, expanded) + shrunken greyscale slides.
+       Scroll / drag / arrows advance; the next slide takes the featured spot. -->
+      <div class="reveal mt-12 mr-[calc(50%-50vw)]" data-delay="1">
+        <div id="pCoverflow" class="qs-cf flex">
+          <!-- Explore card + accent lines -->
+          <div class="qs-cf-intro shrink-0">
+            <div class="flex h-full flex-col">
+              <a href="projects.html"
+                class="flex flex-1 items-start bg-brand px-8 pt-9 text-white group transition hover:opacity-95">
+                <h3 class="font-display font-900 leading-[1.06]" style="font-size:clamp(1.9rem,4.2vw,2.75rem)">
+                  Explore<br />our<br />Projects.</h3>
+              </a>
+              <div id="pLines" class="qs-cf-lines" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Track -->
+          <div class="relative min-w-0 flex-1 overflow-hidden">
+            <div id="pTrack" class="qs-cf-track flex cursor-grab active:cursor-grabbing"></div>
+
+            <button id="pPrev" aria-label="Previous project" class="qs-cf-nav left-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18 9 12l6-6" />
+              </svg>
+            </button>
+            <button id="pNext" aria-label="Next project" class="qs-cf-nav right-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="pDots" class="mt-4 flex gap-1.5 px-5 md:px-8"></div>
+      </div>
+    </section>
+
+    <!-- ============================ STATS ============================ -->
+    <section id="stats" class="bg-brand text-white">
+      <div
+        class="mx-auto flex max-w-container flex-wrap items-center gap-x-6 gap-y-9 px-5 py-12 md:flex-nowrap md:justify-between md:px-8 md:py-14">
+
+        <!-- Expert Employed : anvil -->
+        <div class="reveal flex w-[45%] items-center gap-3.5 md:w-auto">
+          <img src="images/anvil.png" alt="Expert Employed" class="h-11 w-11 shrink-0 object-contain select-none" />
+          <div>
+            <div class="font-display text-[1.6rem] font-800 leading-none tracking-tight"><span class="stat-num"
+                data-count="150">0</span> +</div>
+            <div class="mt-1.5 text-[11px] font-600 uppercase tracking-[0.16em] text-white/90">Expert Employed</div>
+          </div>
+        </div>
+
+        <!-- Project Completed : hammer -->
+        <div class="reveal flex w-[45%] items-center gap-3.5 md:w-auto" data-delay="1">
+          <img src="images/hammer.png" alt="Project Completed" class="h-11 w-11 shrink-0 object-contain select-none" />
+          <div>
+            <div class="font-display text-[1.6rem] font-800 leading-none tracking-tight"><span class="stat-num"
+                data-count="350">0</span> +</div>
+            <div class="mt-1.5 text-[11px] font-600 uppercase tracking-[0.16em] text-white/90">Project Completed</div>
+          </div>
+        </div>
+
+        <!-- Awards Wining : shield check -->
+        <div class="reveal flex w-[45%] items-center gap-3.5 md:w-auto" data-delay="2">
+          <img src="images/shield-check.png" alt="Awards Wining"
+            class="h-11 w-11 shrink-0 object-contain select-none" />
+          <div>
+            <div class="font-display text-[1.6rem] font-800 leading-none tracking-tight"><span class="stat-num"
+                data-count="23">0</span> +</div>
+            <div class="mt-1.5 text-[11px] font-600 uppercase tracking-[0.16em] text-white/90">Awards Wining</div>
+          </div>
+        </div>
+
+        <!-- Happy Clients : stacked cubes -->
+        <div class="reveal flex w-[45%] items-center gap-3.5 md:w-auto" data-delay="3">
+          <img src="images/stacked-cubes.png" alt="Happy Clients"
+            class="h-11 w-11 shrink-0 object-contain select-none" />
+          <div>
+            <div class="font-display text-[1.6rem] font-800 leading-none tracking-tight"><span class="stat-num"
+                data-count="600">0</span> +</div>
+            <div class="mt-1.5 text-[11px] font-600 uppercase tracking-[0.16em] text-white/90">Happy Clients</div>
+          </div>
+        </div>
+
+        <!-- Tons of Capacity : factory -->
+        <div class="reveal flex w-[45%] items-center gap-3.5 md:w-auto" data-delay="4">
+          <img src="images/factory.png" alt="Tons of Capacity" class="h-11 w-11 shrink-0 object-contain select-none" />
+          <div>
+            <div class="font-display text-[1.6rem] font-800 leading-none tracking-tight"><span class="stat-num"
+                data-count="20000">0</span> +</div>
+            <div class="mt-1.5 text-[11px] font-600 uppercase tracking-[0.16em] text-white/90">Tons of Capacity</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ PARTNERS LOGO CAROUSEL ============================ -->
+    <section id="partners" class="border-y border-black/10 bg-paper py-14 overflow-hidden md:py-18">
+      <div class="mx-auto max-w-container px-5 mb-8 text-center md:px-8">
+        <span class="text-xs font-700 uppercase tracking-[0.22em] text-brand">Strategic Alliances &amp; Clients</span>
+        <h2 class="font-display h-lg mt-2 text-ink">Trusted by Industry Leaders</h2>
+      </div>
+
+      <!-- Infinite Marquee Track with edge fade masks -->
+      <div
+        class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+        <div class="partners-marquee-track flex items-center gap-12 md:gap-16 py-3">
+
+          <!-- 1. WAREMA Germany -->
+          <div class="partner-logo-item shrink-0">
+            <img src="images/partners/warema.png" alt="WAREMA Germany - Sun Shading Systems"
+              class="h-9 md:h-11 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <!-- 2. Genius & Blinds -->
+          <div class="partner-logo-item shrink-0">
+            <img src="images/partners/genius.png" alt="Genius &amp; Blinds - Insect Screen Systems"
+              class="h-8 md:h-10 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <!-- 3. Somfy -->
+          <div class="partner-logo-item shrink-0">
+            <img src="images/partners/somfy.svg" alt="Somfy - Shading Automation &amp; Motors"
+              class="h-8 md:h-10 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <!-- 4. GEIGER Antriebstechnik -->
+          <div class="partner-logo-item shrink-0">
+            <img src="images/partners/geiger.svg" alt="GEIGER Antriebstechnik Germany"
+              class="h-8 md:h-10 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <!-- 5. STOBAG Switzerland -->
+          <div class="partner-logo-item shrink-0">
+            <img src="images/partners/stobag.png" alt="STOBAG Switzerland - Weather Protection Systems"
+              class="h-8 md:h-10 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <!-- 6. Markilux Germany -->
+          <div class="partner-logo-item shrink-0">
+            <img src="images/partners/markilux.png" alt="Markilux Germany - Luxury Design Awnings"
+              class="h-7 md:h-9 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <!-- 7. Serge Ferrari -->
+          <div class="partner-logo-item shrink-0">
+            <img src="images/partners/sergeferrari.svg" alt="Serge Ferrari - Composite Architectural Fabrics"
+              class="h-8 md:h-10 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <!-- 8. EMAAR Properties -->
+          <div class="partner-logo-item shrink-0">
+            <img src="images/partners/emaar.svg" alt="EMAAR Properties"
+              class="h-7 md:h-9 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <!-- 9. DAMAC Properties -->
+          <div class="partner-logo-item shrink-0">
+            <img src="images/partners/damac.svg" alt="DAMAC Properties"
+              class="h-7 md:h-9 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <!-- 10. MERAAS -->
+          <div class="partner-logo-item shrink-0">
+            <img src="images/partners/meraas.svg" alt="MERAAS Dubai Holding"
+              class="h-7 md:h-9 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <!-- 11. SOBHA Realty -->
+          <div class="partner-logo-item shrink-0">
+            <img src="images/partners/sobha.svg" alt="SOBHA Realty"
+              class="h-7 md:h-9 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <!-- 12. ALDAR Properties -->
+          <div class="partner-logo-item shrink-0">
+            <img src="images/partners/aldar.png" alt="ALDAR Properties"
+              class="h-8 md:h-10 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <!-- 13. BULGARI Hotels & Resorts -->
+          <div class="partner-logo-item shrink-0">
+            <img src="images/partners/bulgari.svg" alt="BULGARI Hotels &amp; Resorts"
+              class="h-6 md:h-8 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <!-- 14. Atlantis The Royal -->
+          <div class="partner-logo-item shrink-0">
+            <img src="images/partners/atlantis.svg" alt="Atlantis The Royal"
+              class="h-8 md:h-10 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <!-- 15. Kempinski Hotels -->
+          <div class="partner-logo-item shrink-0">
+            <img src="images/partners/kempinski.svg" alt="Kempinski Hotels &amp; Resorts"
+              class="h-8 md:h-10 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <!-- ================= DUPLICATE SET FOR SEAMLESS INFINITE LOOP ================= -->
+
+          <div class="partner-logo-item shrink-0" aria-hidden="true">
+            <img src="images/partners/warema.png" alt="WAREMA Germany - Sun Shading Systems"
+              class="h-9 md:h-11 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <div class="partner-logo-item shrink-0" aria-hidden="true">
+            <img src="images/partners/genius.png" alt="Genius &amp; Blinds - Insect Screen Systems"
+              class="h-8 md:h-10 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <div class="partner-logo-item shrink-0" aria-hidden="true">
+            <img src="images/partners/somfy.svg" alt="Somfy - Shading Automation &amp; Motors"
+              class="h-8 md:h-10 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <div class="partner-logo-item shrink-0" aria-hidden="true">
+            <img src="images/partners/geiger.svg" alt="GEIGER Antriebstechnik Germany"
+              class="h-8 md:h-10 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <div class="partner-logo-item shrink-0" aria-hidden="true">
+            <img src="images/partners/stobag.png" alt="STOBAG Switzerland - Weather Protection Systems"
+              class="h-8 md:h-10 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <div class="partner-logo-item shrink-0" aria-hidden="true">
+            <img src="images/partners/markilux.png" alt="Markilux Germany - Luxury Design Awnings"
+              class="h-7 md:h-9 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <div class="partner-logo-item shrink-0" aria-hidden="true">
+            <img src="images/partners/sergeferrari.svg" alt="Serge Ferrari - Composite Architectural Fabrics"
+              class="h-8 md:h-10 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <div class="partner-logo-item shrink-0" aria-hidden="true">
+            <img src="images/partners/emaar.svg" alt="EMAAR Properties"
+              class="h-7 md:h-9 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <div class="partner-logo-item shrink-0" aria-hidden="true">
+            <img src="images/partners/damac.svg" alt="DAMAC Properties"
+              class="h-7 md:h-9 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <div class="partner-logo-item shrink-0" aria-hidden="true">
+            <img src="images/partners/meraas.svg" alt="MERAAS Dubai Holding"
+              class="h-7 md:h-9 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <div class="partner-logo-item shrink-0" aria-hidden="true">
+            <img src="images/partners/sobha.svg" alt="SOBHA Realty"
+              class="h-7 md:h-9 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <div class="partner-logo-item shrink-0" aria-hidden="true">
+            <img src="images/partners/aldar.png" alt="ALDAR Properties"
+              class="h-8 md:h-10 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <div class="partner-logo-item shrink-0" aria-hidden="true">
+            <img src="images/partners/bulgari.svg" alt="BULGARI Hotels &amp; Resorts"
+              class="h-6 md:h-8 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <div class="partner-logo-item shrink-0" aria-hidden="true">
+            <img src="images/partners/atlantis.svg" alt="Atlantis The Royal"
+              class="h-8 md:h-10 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+          <div class="partner-logo-item shrink-0" aria-hidden="true">
+            <img src="images/partners/kempinski.svg" alt="Kempinski Hotels &amp; Resorts"
+              class="h-8 md:h-10 w-auto object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-105" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CTA ============================ -->
+    <section id="contact" class="bg-ink text-white">
+      <div
+        class="mx-auto flex max-w-container flex-col gap-8 px-5 py-16 md:flex-row md:items-center md:justify-between md:px-8 md:py-20">
+        <div class="reveal">
+          <h2 class="font-display h-lg">Let’s create a better space.</h2>
+          <p class="mt-4 max-w-lg text-sm leading-7 text-white/60">
+            Whether you’re designing a residence, hotel, commercial development or outdoor
+            environment, we’ll help you find the right system for the space.
+          </p>
+        </div>
+        <a href="mailto: info@qualityspace.ae"
+          class="btn-pill btn-ghost shrink-0 self-start bg-white px-7 py-3.5 text-sm text-ink md:self-auto">
+          Talk to an Expert
+          <span class="ico flex h-7 w-7 items-center justify-center rounded-full bg-ink/10">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="bg-ink pb-10 pt-16 text-white">
+    <div class="mx-auto grid max-w-container gap-10 px-5 md:grid-cols-12 md:px-8">
+      <div class="md:col-span-4">
+        <div class="inline-flex rounded-lg bg-white px-4 py-3">
+          <img src="images/logo.png" alt="Quality Space L.L.C" class="h-10 w-auto select-none" />
+        </div>
+        <p class="mt-6 text-sm leading-relaxed text-white/80">
+          MK GHANIM WAREHOUSE - WAREHOUSE NO 7<br />
+          Al Asayel St - near AL QUOZ MALL<br />
+          Al Qouz Ind.third - Al Quoz - Dubai
+        </p>
+        <p class="mt-3 text-sm text-white/60">Telephone: <a href="tel:+97148868831"
+            class="text-white/80 hover:text-white">+971 48868831</a></p>
+        <p class="text-sm text-white/60">Mobile: <a href="tel:+97148868895" class="text-white/80 hover:text-white">+971
+            48868895</a> / <a href="tel:+971553574774" class="text-white/80 hover:text-white">+971 553574774</a></p>
+        <a href="mailto: info@qualityspace.ae" class="mt-1 block text-sm text-white/60 hover:text-white">
+          info@qualityspace.ae</a>
+        <div class="mt-6 flex gap-3">
+          <a href="https://www.facebook.com/share/19B5xXnbHY/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-brand hover:bg-brand"><svg
+              width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5H17V4.6C16.7 4.56 15.75 4.5 14.65 4.5c-2.35 0-3.95 1.43-3.95 4.06v2.34H8v3.1h2.7V22z" />
+            </svg></a>
+          <a href="https://www.instagram.com/qualityspacellc?stkn=NXJqMWI3dDNlbmx6" target="_blank"
+            rel="noopener noreferrer" aria-label="Instagram"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-brand hover:bg-brand"><svg
+              width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 8.7A3.3 3.3 0 1 0 12 15.3 3.3 3.3 0 0 0 12 8.7m0-2.2c1.6 0 1.8 0 2.4.03 3.1.14 4.5 1.6 4.65 4.65.03.62.03.82.03 2.4s0 1.78-.03 2.4c-.15 3.04-1.55 4.5-4.65 4.65-.62.03-.82.03-2.4.03s-1.78 0-2.4-.03c-3.1-.15-4.5-1.62-4.65-4.65C4.92 13.78 4.92 13.58 4.92 12s0-1.78.03-2.4C5.1 6.56 6.5 5.1 9.6 4.95 10.22 4.92 10.42 4.92 12 4.92M12 3.5c-1.62 0-1.83 0-2.47.04C5.36 3.73 3.23 5.86 3.04 9.99 3 10.63 3 10.84 3 12.46s0 1.83.04 2.47c.19 4.13 2.32 6.26 6.45 6.45.64.04.85.04 2.47.04s1.83 0 2.47-.04c4.13-.19 6.26-2.32 6.45-6.45.04-.64.04-.85.04-2.47s0-1.83-.04-2.47c-.19-4.13-2.32-6.26-6.45-6.45C13.83 3.5 13.62 3.5 12 3.5m0 3.68A4.82 4.82 0 1 0 12 16.82 4.82 4.82 0 0 0 12 7.18m5.85-1.12a1.13 1.13 0 1 0 0 2.26 1.13 1.13 0 0 0 0-2.26" />
+            </svg></a>
+          <a href="https://youtube.com/@qualityspace-qsp?si=2aPfRl_K2iKHwcly" target="_blank" rel="noopener noreferrer"
+            aria-label="YouTube"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-brand hover:bg-brand"><svg
+              width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg></a>
+        </div>
+      </div>
+
+      <div class="md:col-span-2 md:col-start-6">
+        <h4 class="text-xs font-700 uppercase tracking-[0.2em] text-white/40">Explore</h4>
+        <ul class="mt-4 space-y-2.5 text-sm text-white/60">
+          <li><a class="foot-link block" href="about.html">About Us</a></li>
+          <li><a class="foot-link block" href="products.html">Products</a></li>
+          <li><a class="foot-link block" href="projects.html">Projects</a></li>
+          <li><a class="foot-link block" href="#stats">Partners</a></li>
+          <li><a class="foot-link block" href="gallery.html">Gallery</a></li>
+          <li><a class="foot-link block" href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2">
+        <h4 class="text-xs font-700 uppercase tracking-[0.2em] text-white/40">Products</h4>
+        <ul class="mt-4 space-y-2.5 text-sm text-white/60">
+          <li><a class="foot-link block hover:text-white transition"
+              href="product-detail/q-mesh-lateral-pleated-fly-screen.html">Q Mesh Pleated Screen</a></li>
+          <li><a class="foot-link block hover:text-white transition"
+              href="product-detail/q90-lateral-plain-mesh-fly-screens.html">Q90 Plain Mesh Screen</a></li>
+          <li><a class="foot-link block hover:text-white transition"
+              href="product-detail/triangular-shades.html">Triangular Shades</a></li>
+          <li><a class="foot-link block hover:text-white transition" href="product-detail/kheope.html">Kheope Sail
+              Awning</a></li>
+          <li><a class="foot-link block hover:text-white transition" href="product-detail/skylight-shades.html">Skylight
+              Shades</a></li>
+          <li><a class="foot-link block hover:text-white transition text-brand font-600" href="products.html">All 12
+              Solutions →</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2">
+        <h4 class="text-xs font-700 uppercase tracking-[0.2em] text-white/40">Support</h4>
+        <ul class="mt-4 space-y-2.5 text-sm text-white/60">
+          <li><a class="foot-link block" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-14 max-w-container border-t border-white/10 px-5 pt-6 text-xs text-white/40 md:px-8">
+      © <span id="year">2026</span> Quality Space L.L.C. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floater -->
+  <a href="https://wa.me/0506632081" target="_blank" rel="noopener noreferrer"
+    class="whatsapp-float fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white transition-all duration-300 hover:scale-110 active:scale-95 group"
+    aria-label="Chat on WhatsApp">
+    <span class="whatsapp-ping absolute inline-flex h-full w-full rounded-full bg-[#25D366]"></span>
+    <svg class="relative h-7 w-7 fill-current" viewBox="0 0 24 24">
+      <path
+        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+    </svg>
+    <span
+      class="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-lg bg-ink px-3 py-1.5 text-xs font-600 text-white shadow-lg opacity-0 transition-opacity duration-200 group-hover:opacity-100 hidden sm:block">
+      Chat on WhatsApp
+    </span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

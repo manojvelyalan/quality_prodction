@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Private Villa - Emirates Hills, Dubai | Project Case Study - Quality Space LLC</title>
+  <meta name="description"
+    content="Case study of a luxury private villa in Emirates Hills, Dubai featuring continuous 5.8-meter custom motorized insect screens and automated WAREMA external Venetian blinds." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: "#c8102e", dark: "#a00c24", light: "#e0142f" },
+            ink: "#161616",
+            paper: "#f5f4f2",
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+            display: ["Archivo", "Inter", "sans-serif"],
+          },
+          fontWeight: {
+            400: "400", 500: "500", 600: "600", 700: "700", 800: "800", 900: "900",
+          },
+          maxWidth: { container: "1216px" },
+        },
+      },
+    };
+  </script>
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+
+<body class="bg-white font-sans text-ink antialiased">
+
+  <!-- ============================ HEADER ============================ -->
+  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-white">
+    <div class="mx-auto flex max-w-container items-center justify-between px-5 py-4 md:px-8">
+      <!-- Logo -->
+      <a href="index.html"
+        class="flex items-center px-4 py-2 transition hover:bg-white">
+        <img src="images/logo.png" alt="Quality Space L.L.C - Dream it, Design it, Build it"
+          class="h-8 w-auto select-none md:h-11" />
+      </a>
+
+      <div class="flex items-center gap-3">
+        <!-- Header Contact Info -->
+        <a href="mailto:info@qualityspace.ae"
+          class="hidden items-center gap-2 rounded-full border border-black/10 bg-white/85 px-3.5 py-2 text-xs font-600 text-ink backdrop-blur shadow-sm transition hover:bg-white hover:text-brand lg:inline-flex">
+          <svg class="h-3.5 w-3.5 text-brand shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span>info@qualityspace.ae</span>
+        </a>
+
+        <a href="tel:0506632081"
+          class="hidden items-center gap-2 rounded-full border border-black/10 bg-white/85 px-3.5 py-2 text-xs font-600 text-ink backdrop-blur shadow-sm transition hover:bg-white hover:text-brand sm:inline-flex">
+          <svg class="h-3.5 w-3.5 text-brand shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <span>0506632081</span>
+        </a>
+
+        <a href="contact.html#inquiry-form"
+          class="btn-ghost hidden rounded-full bg-ink px-6 py-2.5 text-sm font-600 text-white transition sm:inline-flex">Request
+          Service</a>
+        <button id="burger"
+          class="burger relative z-[60] flex h-11 w-11 flex-col items-center justify-center gap-[5px] rounded-full border border-black/10 bg-white/70 backdrop-blur"
+          aria-label="Menu" aria-expanded="false">
+          <span class="block h-[2px] w-5 bg-ink"></span>
+          <span class="block h-[2px] w-5 bg-ink"></span>
+          <span class="block h-[2px] w-5 bg-ink"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Nav overlay -->
+  <nav id="navOverlay" class="fixed inset-0 z-[55] flex flex-col items-center justify-center bg-ink text-white">
+    <a href="index.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Home</a>
+    <a href="about.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">About Us</a>
+    <a href="products.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Products</a>
+    <a href="projects.html" class="font-display text-4xl font-800 py-3 text-brand transition">Projects</a>
+    <a href="gallery.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Gallery</a>
+    <a href="blog.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Blog</a>
+    <a href="contact.html" class="font-display text-4xl font-800 py-3 hover:text-brand transition">Contact</a>
+
+    <!-- Close button -->
+    <button id="navClose"
+      class="absolute top-5 right-5 z-20 flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur transition hover:bg-white hover:text-ink hover:scale-110 active:scale-95 md:top-7 md:right-8"
+      aria-label="Close menu">
+      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </nav>
+
+  <main id="top" class="pt-28 md:pt-36">
+
+    <!-- ============================ PROJECT HEADER ============================ -->
+    <section class="mx-auto max-w-container px-5 md:px-8">
+
+      <!-- Breadcrumbs -->
+      <nav aria-label="Breadcrumb" class="mb-6 flex items-center gap-2 text-xs font-600 text-neutral-400">
+        <a href="index.html" class="transition hover:text-brand">Home</a>
+        <span>/</span>
+        <a href="projects.html" class="transition hover:text-brand">Projects</a>
+        <span>/</span>
+        <span class="text-ink font-700">Private Villa - Emirates Hills</span>
+      </nav>
+
+      <!-- Headline & Tag -->
+      <div class="max-w-4xl">
+        <div class="flex flex-wrap items-center gap-3">
+          <span
+            class="inline-flex items-center gap-2 rounded-full bg-brand/10 px-3.5 py-1 text-xs font-700 tracking-wider text-brand uppercase">
+            Luxury Residential Case Study
+          </span>
+          <span class="text-xs font-600 text-neutral-400">Emirates Hills, Dubai</span>
+          <span class="text-xs font-600 text-neutral-400">·</span>
+          <span class="text-xs font-600 text-neutral-400">Completed Q4 2025</span>
+        </div>
+
+        <h1 class="font-display mt-4 text-3xl font-900 leading-[1.15] text-ink md:text-5xl lg:text-[3.25rem]">
+          Private Villa - Emirates Hills, Dubai
+        </h1>
+
+        <p class="mt-5 text-lg leading-relaxed text-neutral-600 md:text-xl">
+          Continuous 5.8-meter custom motorized insect screens and automated WAREMA external Venetian blinds for an
+          expansive 16-meter openable sliding glass facade.
+        </p>
+      </div>
+
+      <!-- Project Metadata Strip -->
+      <div class="mt-8 grid grid-cols-2 gap-4 border-y border-black/10 py-6 sm:grid-cols-4 md:gap-8">
+        <div>
+          <span class="text-[11px] font-700 uppercase tracking-wider text-neutral-400">Location</span>
+          <p class="font-display mt-1 text-sm font-800 text-ink">Emirates Hills, Dubai, UAE</p>
+        </div>
+        <div>
+          <span class="text-[11px] font-700 uppercase tracking-wider text-neutral-400">Systems Deployed</span>
+          <p class="font-display mt-1 text-sm font-800 text-ink">5.8M Screens &amp; WAREMA Blinds</p>
+        </div>
+        <div>
+          <span class="text-[11px] font-700 uppercase tracking-wider text-neutral-400">Opening Span</span>
+          <p class="font-display mt-1 text-sm font-800 text-ink">16m Width x 5.8m Height</p>
+        </div>
+        <div>
+          <span class="text-[11px] font-700 uppercase tracking-wider text-neutral-400">Automation</span>
+          <p class="font-display mt-1 text-sm font-800 text-ink">KNX &amp; Sun/Wind Tracking</p>
+        </div>
+      </div>
+
+      <!-- Feature Image Showcase -->
+      <div class="mt-10 overflow-hidden rounded-3xl border border-black/10 shadow-lg">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85"
+          alt="Luxury villa in Emirates Hills with 5.8m custom insect screens and external Venetian blinds"
+          class="h-[480px] w-full object-cover md:h-[600px]" />
+        <div class="bg-paper px-6 py-4 text-xs text-neutral-600 border-t border-black/10">
+          <strong>Architectural View:</strong> The south-facing double-height living room overlooking the championship
+          golf course and infinity pool. Quality Space concealed head pockets completely hide all motors and winding
+          tubes when screens and blinds are retracted.
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============================ EDITORIAL BREAKDOWN & SIDEBAR ============================ -->
+    <section class="mx-auto max-w-container px-5 py-14 md:px-8 md:py-20">
+      <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+
+        <!-- ================= MAIN CONTENT (8 COLS) ================= -->
+        <div class="article-prose lg:col-span-8">
+
+          <!-- Section 1 -->
+          <div>
+            <h2 class="!mt-0">1. The Architectural Brief &amp; Challenge</h2>
+            <p>
+              Set within the premier enclave of Emirates Hills, this bespoke 18,000 sq.ft. contemporary villa was
+              designed with an ultra-minimalist aesthetic. The focal point of the residence is an expansive
+              <strong>16-meter wide, double-height living pavilion</strong> framed by slim-profile structural sliding
+              glass doors rising to a vertical height of <strong>5.8 meters</strong>.
+            </p>
+            <p>
+              The client and European architectural team sought to create an unbroken connection between the indoor
+              travertine flooring and the exterior outdoor lounge and infinity pool deck. However, two critical climatic
+              challenges emerged during the design phase:
+            </p>
+            <ul>
+              <li><strong>Extreme Solar Heat Gain:</strong> Direct afternoon solar radiation would generate severe
+                greenhouse heat through the vast glass envelope, driving up cooling requirements and causing unbearable
+                glare.</li>
+              <li><strong>Insects at Sunset:</strong> Opening the massive sliding panels during cooler autumn and winter
+                evenings allowed desert mosquitoes and pests into the residence.</li>
+              <li><strong>Zero Tolerance for Bulky Hardware:</strong> Conventional insect screens are structurally
+                capped at 3 meters and require bulky intermediate mullions or heavy surface-mounted track lips, which
+                would ruin the 16-meter uninterrupted architectural horizon.</li>
+            </ul>
+          </div>
+
+          <!-- Section 2 -->
+          <div>
+            <h2>2. The Integrated Quality Space Engineering Solution</h2>
+            <p>
+              Quality Space was engaged during the structural concrete stage to coordinate both the <strong>custom 5.8m
+                oversized insect screening</strong> and <strong>external motorized solar shading</strong> into a
+              cohesive, concealed envelope detail.
+            </p>
+            <p>
+              Our solution combined two complementary German-engineered technologies:
+            </p>
+            <ul>
+              <li><strong>Quality Space 5.8M Continuous Insect Screens:</strong> Engineered with a proprietary internal
+                counter-balancing cartridge and high-tenacity micro-weave mesh, allowing continuous single-span
+                operation across 5.8m vertical drop without cloth sag or flutter.</li>
+              <li><strong>WAREMA External Venetian Blinds:</strong> Fitted with 80mm rolled edge aluminum slats
+                featuring marine-grade corrosion coatings. Positioned outside the glass, they intercept up to
+                <strong>88% of solar thermal radiation</strong> before it can touch the glass surface.
+              </li>
+              <li><strong>Recessed Concealed Head Pockets:</strong> Both the screen spools and Venetian blind head boxes
+                were integrated into custom cast-in-place concrete ceiling recesses, rendering them 100% invisible from
+                both inside and outside when raised.</li>
+              <li><strong>Zero-Threshold Flush Floor Channels:</strong> The bottom guide rail is recessed totally flush
+                with the finished Italian travertine tiles, incorporating sub-floor drainage weep slots for rain and
+                terrace washdown.</li>
+            </ul>
+
+            <!-- Pull Quote -->
+            <blockquote>
+              "Quality Space achieved what three other international contractors told us was technically impossible:
+              screening a 5.8-meter vertical opening without intermediate transoms or visible floor lips."
+              <span class="mt-2 block text-xs font-700 not-italic uppercase tracking-wider text-brand">
+                - Project Lead Architect, Contemporary European Design Practice
+              </span>
+            </blockquote>
+          </div>
+
+          <!-- Section 3: Visual Details Grid -->
+          <div>
+            <h2>3. Photographic Details &amp; Substrate Integration</h2>
+            <p>
+              Take a closer look at the precision engineering details implemented across the Emirates Hills villa:
+            </p>
+
+            <div class="my-8 grid gap-6 sm:grid-cols-2">
+              <div class="overflow-hidden rounded-2xl border border-black/10 bg-paper">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80"
+                  alt="Flush floor channel detail" class="h-52 w-full object-cover" />
+                <div class="p-4">
+                  <h4 class="font-display text-xs font-800 text-ink uppercase tracking-wider">0mm Flush Floor Channel
+                  </h4>
+                  <p class="mt-1 text-[11px] leading-5 text-neutral-500">
+                    Seamless level transition from interior living travertine to exterior pool deck with zero tripping
+                    hazard.
+                  </p>
+                </div>
+              </div>
+
+              <div class="overflow-hidden rounded-2xl border border-black/10 bg-paper">
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=80"
+                  alt="WAREMA External Venetian Blinds with tilted slats" class="h-52 w-full object-cover" />
+                <div class="p-4">
+                  <h4 class="font-display text-xs font-800 text-ink uppercase tracking-wider">WAREMA 80mm Rolled Slats
+                  </h4>
+                  <p class="mt-1 text-[11px] leading-5 text-neutral-500">
+                    Daylight-harvesting slat tilt angles blocking direct solar glare while preserving panoramic views.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 4: Specifications Table -->
+          <div>
+            <h2>4. Engineering Specifications Matrix</h2>
+            <p>
+              Detailed technical performance data recorded for this installation:
+            </p>
+
+            <div class="overflow-x-auto">
+              <table class="tech-table">
+                <thead>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Specification Detail</th>
+                    <th>Certification / Compliance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="font-700 text-ink">Max Clear Height</td>
+                    <td>5,820 mm continuous vertical drop</td>
+                    <td>German DIN EN 1932</td>
+                  </tr>
+                  <tr>
+                    <td class="font-700 text-ink">Opening Width</td>
+                    <td>16,200 mm segmented into 4 operable bays</td>
+                    <td>Custom Modular Coupling</td>
+                  </tr>
+                  <tr>
+                    <td class="font-700 text-ink">Wind Load Rating</td>
+                    <td>Certified up to 60 km/h (Beaufort 6)</td>
+                    <td>DIN EN 13659 Class 6</td>
+                  </tr>
+                  <tr>
+                    <td class="font-700 text-ink">Mesh Material</td>
+                    <td>High-Tenacity German Polyethylene Micro-Weave</td>
+                    <td>&gt;82% Optical Clarity</td>
+                  </tr>
+                  <tr>
+                    <td class="font-700 text-ink">Solar Heat Protection</td>
+                    <td>WAREMA 80mm rolled slats with sun tracking</td>
+                    <td>88% Solar Thermal Rejection (g-tot: 0.12)</td>
+                  </tr>
+                  <tr>
+                    <td class="font-700 text-ink">Automation System</td>
+                    <td>KNX Building Automation &amp; Roof Weather Station</td>
+                    <td>Somfy / WAREMA KNX Actuators</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Section 5: Realized Results -->
+          <div>
+            <h2>5. Measured Performance &amp; Client Benefits</h2>
+            <p>
+              Following 12 months of full occupancy in Dubai's desert climate, telemetry data demonstrated remarkable
+              environmental benefits:
+            </p>
+            <div class="my-6 grid gap-4 sm:grid-cols-3">
+              <div class="rounded-2xl border border-black/10 bg-paper p-5 text-center">
+                <span class="font-display text-3xl font-900 text-brand">41%</span>
+                <p class="mt-1 text-xs font-700 uppercase tracking-wider text-neutral-600">HVAC Energy Reduction</p>
+                <p class="mt-1 text-[11px] text-neutral-400">Peak summer cooling load drop</p>
+              </div>
+
+              <div class="rounded-2xl border border-black/10 bg-paper p-5 text-center">
+                <span class="font-display text-3xl font-900 text-brand">0 mm</span>
+                <p class="mt-1 text-xs font-700 uppercase tracking-wider text-neutral-600">Floor Threshold Lip</p>
+                <p class="mt-1 text-[11px] text-neutral-400">Complete zero-step integration</p>
+              </div>
+
+              <div class="rounded-2xl border border-black/10 bg-paper p-5 text-center">
+                <span class="font-display text-3xl font-900 text-brand">100%</span>
+                <p class="mt-1 text-xs font-700 uppercase tracking-wider text-neutral-600">Insect Barrier</p>
+                <p class="mt-1 text-[11px] text-neutral-400">Zero pest intrusion at evening</p>
+              </div>
+            </div>
+
+            <p>
+              The villa owners enjoy continuous evening natural ventilation throughout the cooler months from October to
+              April, drastically enhancing well-being and reducing reliance on artificial air conditioning.
+            </p>
+          </div>
+
+          <!-- Callout -->
+          <div class="my-10 rounded-2xl border-l-4 border-brand bg-paper p-7">
+            <h4 class="font-display text-sm font-800 text-ink uppercase tracking-wider">
+              Need Similar Engineering on Your Project?
+            </h4>
+            <p class="mt-2 text-xs leading-relaxed text-neutral-600">
+              Our Dubai engineering hub provides comprehensive early-stage support for architects and general
+              contractors, including 3D BIM object libraries, structural substrate fixing calculations, and concealed
+              pocket shop drawings.
+            </p>
+            <div class="mt-4 flex gap-3">
+              <a href="contact.html#inquiry-form"
+                class="text-xs font-700 uppercase tracking-wider text-brand hover:underline">
+                Request Engineering Review &rarr;
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ================= STICKY SIDEBAR (4 COLS) ================= -->
+        <aside class="space-y-8 lg:col-span-4">
+
+          <!-- Project Quick Factsheet -->
+          <div class="sticky top-28 rounded-3xl border border-black/10 bg-white p-7 shadow-sm">
+            <h4 class="font-display text-base font-800 text-ink uppercase tracking-wider">
+              Project Factsheet
+            </h4>
+
+            <div class="mt-6 space-y-4 text-xs">
+              <div class="flex justify-between border-b border-black/5 pb-3">
+                <span class="text-neutral-400 font-600">Project Type</span>
+                <span class="font-700 text-ink">Luxury Private Villa</span>
+              </div>
+              <div class="flex justify-between border-b border-black/5 pb-3">
+                <span class="text-neutral-400 font-600">Location</span>
+                <span class="font-700 text-ink">Emirates Hills, Dubai</span>
+              </div>
+              <div class="flex justify-between border-b border-black/5 pb-3">
+                <span class="text-neutral-400 font-600">Clear Height</span>
+                <span class="font-700 text-brand">5,820 mm (5.8m)</span>
+              </div>
+              <div class="flex justify-between border-b border-black/5 pb-3">
+                <span class="text-neutral-400 font-600">Screen Technology</span>
+                <span class="font-700 text-ink">Quality Space 6M German</span>
+              </div>
+              <div class="flex justify-between border-b border-black/5 pb-3">
+                <span class="text-neutral-400 font-600">Solar Shading</span>
+                <span class="font-700 text-ink">WAREMA 80mm Venetian</span>
+              </div>
+              <div class="flex justify-between border-b border-black/5 pb-3">
+                <span class="text-neutral-400 font-600">Automation</span>
+                <span class="font-700 text-ink">KNX Weather Integrated</span>
+              </div>
+              <div class="flex justify-between pb-1">
+                <span class="text-neutral-400 font-600">Warranty</span>
+                <span class="font-700 text-emerald-700">Official European Partner</span>
+              </div>
+            </div>
+
+            <!-- Direct Consultation Box -->
+            <div class="mt-8 pt-8 border-t border-black/10">
+              <span class="text-[10px] font-700 uppercase tracking-widest text-brand">Consultation</span>
+              <h5 class="font-display mt-1 text-base font-800 text-ink">
+                Speak with Project Engineer
+              </h5>
+              <p class="mt-1.5 text-xs text-neutral-500">
+                Discuss custom heights, wind stability, and pocket recesses with our Dubai team.
+              </p>
+
+              <div class="mt-5 space-y-2 text-xs">
+                <a href="tel:+97148868831"
+                  class="flex items-center gap-2 rounded-xl border border-black/10 bg-paper px-4 py-2.5 font-700 text-ink transition hover:border-brand hover:text-brand">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                  Office: +971 48868831
+                </a>
+                <a href="https://wa.me/971553574774" target="_blank" rel="noopener"
+                  class="flex items-center gap-2 rounded-xl bg-[#25D366]/15 px-4 py-2.5 font-700 text-[#128C7E] transition hover:bg-[#25D366]/25">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                  </svg>
+                  WhatsApp: +971 553574774
+                </a>
+              </div>
+
+              <a href="contact.html#inquiry-form"
+                class="btn-pill mt-4 w-full justify-center bg-brand py-3 text-xs text-white hover:bg-brand-dark">
+                Request Project Consultation
+              </a>
+            </div>
+
+            <!-- Download CAD Pack Box -->
+            <div class="mt-8 rounded-2xl bg-ink p-5 text-white">
+              <span class="text-[10px] font-700 uppercase tracking-widest text-brand-light">Specifier Tool</span>
+              <h5 class="font-display mt-1 text-sm font-800">Download Emirates Hills DWG Pack</h5>
+              <p class="mt-1.5 text-[11px] leading-relaxed text-white/60">
+                Detailed CAD head pocket cross-sections and zero-threshold drainage channel profiles.
+              </p>
+              <a href="mailto: info@qualityspace.ae?subject=Emirates%20Hills%20Case%20Study%20CAD%20Request"
+                class="mt-4 block rounded-full border border-white/20 bg-white/10 py-2 text-center text-xs font-700 text-white transition hover:bg-white hover:text-ink">
+                Request DWG Details &darr;
+              </a>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ============================ MORE LANDMARK PROJECTS ============================ -->
+    <section class="border-t border-black/10 bg-paper py-20 md:py-28">
+      <div class="mx-auto max-w-container px-5 md:px-8">
+        <div class="reveal mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <span class="text-xs font-700 uppercase tracking-[0.2em] text-brand">Portfolio</span>
+            <h2 class="font-display h-lg mt-2 text-ink">Explore More Landmark Projects</h2>
+          </div>
+          <a href="projects.html"
+            class="inline-flex items-center gap-1.5 text-xs font-700 uppercase tracking-wider text-brand hover:underline">
+            View All Projects
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="grid gap-8 sm:grid-cols-3">
+
+          <article
+            class="project-card reveal flex flex-col rounded-3xl border border-black/10 bg-white overflow-hidden shadow-sm">
+            <div class="h-52 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=800&q=80"
+                alt="Bulgari Resort Jumeirah Bay" class="project-thumb h-full w-full object-cover" />
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <span class="text-[11px] font-700 uppercase tracking-wider text-brand">Hospitality</span>
+                <h4 class="font-display mt-2 text-base font-800 text-ink transition hover:text-brand">
+                  <a href="project-detail.html">Bulgari Resort &amp; Residences - Jumeirah Bay</a>
+                </h4>
+              </div>
+              <a href="project-detail.html"
+                class="mt-4 inline-flex items-center gap-1 text-xs font-700 uppercase tracking-wider text-brand hover:underline">
+                View Case Study &rarr;
+              </a>
+            </div>
+          </article>
+
+          <article
+            class="project-card reveal flex flex-col rounded-3xl border border-black/10 bg-white overflow-hidden shadow-sm"
+            data-delay="1">
+            <div class="h-52 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80"
+                alt="Atlantis The Royal Palm Jumeirah" class="project-thumb h-full w-full object-cover" />
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <span class="text-[11px] font-700 uppercase tracking-wider text-brand">Penthouse &amp; Resort</span>
+                <h4 class="font-display mt-2 text-base font-800 text-ink transition hover:text-brand">
+                  <a href="project-detail.html">Atlantis The Royal Residences - Palm Jumeirah</a>
+                </h4>
+              </div>
+              <a href="project-detail.html"
+                class="mt-4 inline-flex items-center gap-1 text-xs font-700 uppercase tracking-wider text-brand hover:underline">
+                View Case Study &rarr;
+              </a>
+            </div>
+          </article>
+
+          <article
+            class="project-card reveal flex flex-col rounded-3xl border border-black/10 bg-white overflow-hidden shadow-sm"
+            data-delay="2">
+            <div class="h-52 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80"
+                alt="Signature Mansion Dubai Hills" class="project-thumb h-full w-full object-cover" />
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <span class="text-[11px] font-700 uppercase tracking-wider text-brand">Luxury Residential</span>
+                <h4 class="font-display mt-2 text-base font-800 text-ink transition hover:text-brand">
+                  <a href="project-detail.html">Signature Mansion - Dubai Hills Estate</a>
+                </h4>
+              </div>
+              <a href="project-detail.html"
+                class="mt-4 inline-flex items-center gap-1 text-xs font-700 uppercase tracking-wider text-brand hover:underline">
+                View Case Study &rarr;
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="bg-ink pb-10 pt-16 text-white border-t border-white/10">
+    <div class="mx-auto grid max-w-container gap-10 px-5 md:grid-cols-12 md:px-8">
+      <div class="md:col-span-4">
+        <div class="inline-flex rounded-lg bg-white px-4 py-3">
+          <img src="images/logo.png" alt="Quality Space L.L.C" class="h-10 w-auto select-none" />
+        </div>
+        <p class="mt-6 text-sm leading-relaxed text-white/80">
+          MK GHANIM WAREHOUSE - WAREHOUSE NO 7<br />
+          Al Asayel St - near AL QUOZ MALL<br />
+          Al Qouz Ind.third - Al Quoz - Dubai
+        </p>
+        <p class="mt-3 text-sm text-white/60">Telephone: <a href="tel:+97148868831"
+            class="text-white/80 hover:text-white">+971 48868831</a></p>
+        <p class="text-sm text-white/60">Mobile: <a href="tel:+97148868895" class="text-white/80 hover:text-white">+971
+            48868895</a> / <a href="tel:+971553574774" class="text-white/80 hover:text-white">+971 553574774</a></p>
+        <a href="mailto: info@qualityspace.ae" class="mt-1 block text-sm text-white/60 hover:text-white">
+          info@qualityspace.ae</a>
+        <div class="mt-6 flex gap-3">
+          <a href="https://www.facebook.com/share/19B5xXnbHY/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-brand hover:bg-brand"><svg
+              width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5H17V4.6C16.7 4.56 15.75 4.5 14.65 4.5c-2.35 0-3.95 1.43-3.95 4.06v2.34H8v3.1h2.7V22z" />
+            </svg></a>
+          <a href="https://www.instagram.com/qualityspacellc?stkn=NXJqMWI3dDNlbmx6" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-brand hover:bg-brand"><svg
+              width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 8.7A3.3 3.3 0 1 0 12 15.3 3.3 3.3 0 0 0 12 8.7m0-2.2c1.6 0 1.8 0 2.4.03 3.1.14 4.5 1.6 4.65 4.65.03.62.03.82.03 2.4s0 1.78-.03 2.4c-.15 3.04-1.55 4.5-4.65 4.65-.62.03-.82.03-2.4.03s-1.78 0-2.4-.03c-3.1-.15-4.5-1.62-4.65-4.65C4.92 13.78 4.92 13.58 4.92 12s0-1.78.03-2.4C5.1 6.56 6.5 5.1 9.6 4.95 10.22 4.92 10.42 4.92 12 4.92M12 3.5c-1.62 0-1.83 0-2.47.04C5.36 3.73 3.23 5.86 3.04 9.99 3 10.63 3 10.84 3 12.46s0 1.83.04 2.47c.19 4.13 2.32 6.26 6.45 6.45.64.04.85.04 2.47.04s1.83 0 2.47-.04c4.13-.19 6.26-2.32 6.45-6.45.04-.64.04-.85.04-2.47s0-1.83-.04-2.47c-.19-4.13-2.32-6.26-6.45-6.45C13.83 3.5 13.62 3.5 12 3.5m0 3.68A4.82 4.82 0 1 0 12 16.82 4.82 4.82 0 0 0 12 7.18m5.85-1.12a1.13 1.13 0 1 0 0 2.26 1.13 1.13 0 0 0 0-2.26" />
+            </svg></a>
+          <a href="https://youtube.com/@qualityspace-qsp?si=2aPfRl_K2iKHwcly" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-brand hover:bg-brand"><svg
+              width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg></a>
+        </div>
+      </div>
+
+      <div class="md:col-span-2 md:col-start-6">
+        <h4 class="text-xs font-700 uppercase tracking-[0.2em] text-white/40">Explore</h4>
+        <ul class="mt-4 space-y-2.5 text-sm text-white/60">
+          <li><a class="foot-link block" href="about.html">About Us</a></li>
+          <li><a class="foot-link block" href="products.html">Products</a></li>
+          <li><a class="foot-link block text-brand" href="projects.html">Projects</a></li>
+          <li><a class="foot-link block" href="gallery.html">Gallery</a></li>
+          <li><a class="foot-link block" href="blog.html">Blog</a></li>
+          <li><a class="foot-link block" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2">
+        <h4 class="text-xs font-700 uppercase tracking-[0.2em] text-white/40">Products</h4>
+        <ul class="mt-4 space-y-2.5 text-sm text-white/60">
+          <li><a class="foot-link block" href="about.html#warema">WAREMA Facade Awnings</a></li>
+          <li><a class="foot-link block" href="about.html#warema">Cassette Arm Awnings</a></li>
+          <li><a class="foot-link block" href="about.html#warema">External Venetian Blinds</a></li>
+          <li><a class="foot-link block" href="about.html#insect-screens">6M Insect Screens</a></li>
+          <li><a class="foot-link block" href="about.html#insect-screens">Sliding Door Screens</a></li>
+          <li><a class="foot-link block" href="about.html#warema">Roller Shutters</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2">
+        <h4 class="text-xs font-700 uppercase tracking-[0.2em] text-white/40">Support</h4>
+        <ul class="mt-4 space-y-2.5 text-sm text-white/60">
+          <li><a class="foot-link block" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-14 max-w-container border-t border-white/10 px-5 pt-6 text-xs text-white/40 md:px-8">
+      © <span id="year">2026</span> Quality Space L.L.C. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floater -->
+  <a href="https://wa.me/0506632081" target="_blank" rel="noopener noreferrer"
+    class="whatsapp-float fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white transition-all duration-300 hover:scale-110 active:scale-95 group"
+    aria-label="Chat on WhatsApp">
+    <span class="whatsapp-ping absolute inline-flex h-full w-full rounded-full bg-[#25D366]"></span>
+    <svg class="relative h-7 w-7 fill-current" viewBox="0 0 24 24">
+      <path
+        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+    </svg>
+    <span
+      class="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-lg bg-ink px-3 py-1.5 text-xs font-600 text-white shadow-lg opacity-0 transition-opacity duration-200 group-hover:opacity-100 hidden sm:block">
+      Chat on WhatsApp
+    </span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
